@@ -7,163 +7,139 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9D95C72F151C671D00C1AC1D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D95C72E151C671D00C1AC1D /* UIKit.framework */; };
-		9D95C731151C671D00C1AC1D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D95C730151C671D00C1AC1D /* Foundation.framework */; };
-		9D95C733151C671D00C1AC1D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D95C732151C671D00C1AC1D /* CoreGraphics.framework */; };
-		9D95C739151C671D00C1AC1D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9D95C737151C671D00C1AC1D /* InfoPlist.strings */; };
-		9D95C73B151C671D00C1AC1D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D95C73A151C671D00C1AC1D /* main.m */; };
-		9D95C73F151C671D00C1AC1D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D95C73E151C671D00C1AC1D /* AppDelegate.m */; };
-		9D95C742151C671D00C1AC1D /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D95C740151C671D00C1AC1D /* MainStoryboard_iPhone.storyboard */; };
-		9D95C745151C671D00C1AC1D /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D95C743151C671D00C1AC1D /* MainStoryboard_iPad.storyboard */; };
-		9D95C748151C671D00C1AC1D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D95C747151C671D00C1AC1D /* ViewController.m */; };
-		9D95C750151C671D00C1AC1D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D95C74F151C671D00C1AC1D /* SenTestingKit.framework */; };
-		9D95C751151C671D00C1AC1D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D95C72E151C671D00C1AC1D /* UIKit.framework */; };
-		9D95C752151C671D00C1AC1D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D95C730151C671D00C1AC1D /* Foundation.framework */; };
-		9D95C75A151C671D00C1AC1D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9D95C758151C671D00C1AC1D /* InfoPlist.strings */; };
-		9D95C75D151C671D00C1AC1D /* iLearnChineseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D95C75C151C671D00C1AC1D /* iLearnChineseTests.m */; };
+		6FF88E98151C547300834B91 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FF88E97151C547300834B91 /* UIKit.framework */; };
+		6FF88E9A151C547300834B91 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FF88E99151C547300834B91 /* Foundation.framework */; };
+		6FF88E9C151C547300834B91 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FF88E9B151C547300834B91 /* CoreGraphics.framework */; };
+		6FF88EA2151C547300834B91 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6FF88EA0151C547300834B91 /* InfoPlist.strings */; };
+		6FF88EA4151C547300834B91 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF88EA3151C547300834B91 /* main.m */; };
+		6FF88EA8151C547300834B91 /* LearningChineseAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF88EA7151C547300834B91 /* LearningChineseAppDelegate.m */; };
+		6FF88EAB151C547300834B91 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FF88EA9151C547300834B91 /* MainStoryboard.storyboard */; };
+		6FF88EAE151C547300834B91 /* LearningChineseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF88EAD151C547300834B91 /* LearningChineseViewController.m */; };
+		6FF88EB6151C551800834B91 /* LearningChineseGameOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF88EB5151C551800834B91 /* LearningChineseGameOneViewController.m */; };
+		6FF88EB9151C552700834B91 /* LearningChineseGameTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF88EB8151C552700834B91 /* LearningChineseGameTwoViewController.m */; };
+		6FF88EBD151C578400834B91 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FF88EBC151C578400834B91 /* background.png */; };
+		9D0A246F151C6A0300AC7811 /* background1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D0A246E151C6A0300AC7811 /* background1.png */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		9D95C753151C671D00C1AC1D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9D95C721151C671D00C1AC1D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9D95C729151C671D00C1AC1D;
-			remoteInfo = iLearnChinese;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		9D95C72A151C671D00C1AC1D /* iLearnChinese.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iLearnChinese.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D95C72E151C671D00C1AC1D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		9D95C730151C671D00C1AC1D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		9D95C732151C671D00C1AC1D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		9D95C736151C671D00C1AC1D /* iLearnChinese-Info.plist */ = {isa = PBXFileReference; path = "iLearnChinese-Info.plist"; sourceTree = "<group>"; };
-		9D95C738151C671D00C1AC1D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		9D95C73A151C671D00C1AC1D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		9D95C73C151C671D00C1AC1D /* iLearnChinese-Prefix.pch */ = {isa = PBXFileReference; path = "iLearnChinese-Prefix.pch"; sourceTree = "<group>"; };
-		9D95C73D151C671D00C1AC1D /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
-		9D95C73E151C671D00C1AC1D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9D95C741151C671D00C1AC1D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		9D95C744151C671D00C1AC1D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		9D95C746151C671D00C1AC1D /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
-		9D95C747151C671D00C1AC1D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		9D95C74E151C671D00C1AC1D /* iLearnChineseTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iLearnChineseTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D95C74F151C671D00C1AC1D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		9D95C757151C671D00C1AC1D /* iLearnChineseTests-Info.plist */ = {isa = PBXFileReference; path = "iLearnChineseTests-Info.plist"; sourceTree = "<group>"; };
-		9D95C759151C671D00C1AC1D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		9D95C75B151C671D00C1AC1D /* iLearnChineseTests.h */ = {isa = PBXFileReference; path = iLearnChineseTests.h; sourceTree = "<group>"; };
-		9D95C75C151C671D00C1AC1D /* iLearnChineseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iLearnChineseTests.m; sourceTree = "<group>"; };
+		6FF88E93151C547300834B91 /* iLearnChinese.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iLearnChinese.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FF88E97151C547300834B91 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6FF88E99151C547300834B91 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6FF88E9B151C547300834B91 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6FF88E9F151C547300834B91 /* iLearnChinese-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iLearnChinese-Info.plist"; sourceTree = "<group>"; };
+		6FF88EA1151C547300834B91 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6FF88EA3151C547300834B91 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6FF88EA5151C547300834B91 /* iLearnChinese-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iLearnChinese-Prefix.pch"; sourceTree = "<group>"; };
+		6FF88EA6151C547300834B91 /* LearningChineseAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LearningChineseAppDelegate.h; sourceTree = "<group>"; };
+		6FF88EA7151C547300834B91 /* LearningChineseAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LearningChineseAppDelegate.m; sourceTree = "<group>"; };
+		6FF88EAA151C547300834B91 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		6FF88EAC151C547300834B91 /* LearningChineseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LearningChineseViewController.h; sourceTree = "<group>"; };
+		6FF88EAD151C547300834B91 /* LearningChineseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LearningChineseViewController.m; sourceTree = "<group>"; };
+		6FF88EB4151C551800834B91 /* LearningChineseGameOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearningChineseGameOneViewController.h; sourceTree = "<group>"; };
+		6FF88EB5151C551800834B91 /* LearningChineseGameOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearningChineseGameOneViewController.m; sourceTree = "<group>"; };
+		6FF88EB7151C552700834B91 /* LearningChineseGameTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearningChineseGameTwoViewController.h; sourceTree = "<group>"; };
+		6FF88EB8151C552700834B91 /* LearningChineseGameTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearningChineseGameTwoViewController.m; sourceTree = "<group>"; };
+		6FF88EBC151C578400834B91 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		9D0A246E151C6A0300AC7811 /* background1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9D95C727151C671D00C1AC1D /* Frameworks */ = {
+		6FF88E90151C547300834B91 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D95C72F151C671D00C1AC1D /* UIKit.framework in Frameworks */,
-				9D95C731151C671D00C1AC1D /* Foundation.framework in Frameworks */,
-				9D95C733151C671D00C1AC1D /* CoreGraphics.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9D95C74A151C671D00C1AC1D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9D95C750151C671D00C1AC1D /* SenTestingKit.framework in Frameworks */,
-				9D95C751151C671D00C1AC1D /* UIKit.framework in Frameworks */,
-				9D95C752151C671D00C1AC1D /* Foundation.framework in Frameworks */,
+				6FF88E98151C547300834B91 /* UIKit.framework in Frameworks */,
+				6FF88E9A151C547300834B91 /* Foundation.framework in Frameworks */,
+				6FF88E9C151C547300834B91 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9D95C71F151C671D00C1AC1D = {
+		6FF88E88151C547200834B91 = {
 			isa = PBXGroup;
 			children = (
-				9D95C734151C671D00C1AC1D /* iLearnChinese */,
-				9D95C755151C671D00C1AC1D /* iLearnChineseTests */,
-				9D95C72D151C671D00C1AC1D /* Frameworks */,
-				9D95C72B151C671D00C1AC1D /* Products */,
+				6FF88E9D151C547300834B91 /* iLearnChinese */,
+				6FF88E96151C547300834B91 /* Frameworks */,
+				6FF88E94151C547300834B91 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		9D95C72B151C671D00C1AC1D /* Products */ = {
+		6FF88E94151C547300834B91 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9D95C72A151C671D00C1AC1D /* iLearnChinese.app */,
-				9D95C74E151C671D00C1AC1D /* iLearnChineseTests.octest */,
+				6FF88E93151C547300834B91 /* iLearnChinese.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9D95C72D151C671D00C1AC1D /* Frameworks */ = {
+		6FF88E96151C547300834B91 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9D95C72E151C671D00C1AC1D /* UIKit.framework */,
-				9D95C730151C671D00C1AC1D /* Foundation.framework */,
-				9D95C732151C671D00C1AC1D /* CoreGraphics.framework */,
-				9D95C74F151C671D00C1AC1D /* SenTestingKit.framework */,
+				6FF88E97151C547300834B91 /* UIKit.framework */,
+				6FF88E99151C547300834B91 /* Foundation.framework */,
+				6FF88E9B151C547300834B91 /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		9D95C734151C671D00C1AC1D /* iLearnChinese */ = {
+		6FF88E9D151C547300834B91 /* iLearnChinese */ = {
 			isa = PBXGroup;
 			children = (
-				9D95C73D151C671D00C1AC1D /* AppDelegate.h */,
-				9D95C73E151C671D00C1AC1D /* AppDelegate.m */,
-				9D95C740151C671D00C1AC1D /* MainStoryboard_iPhone.storyboard */,
-				9D95C743151C671D00C1AC1D /* MainStoryboard_iPad.storyboard */,
-				9D95C746151C671D00C1AC1D /* ViewController.h */,
-				9D95C747151C671D00C1AC1D /* ViewController.m */,
-				9D95C735151C671D00C1AC1D /* Supporting Files */,
+				6FF88EBB151C567500834B91 /* Ressources */,
+				6FF88EBA151C565800834B91 /* GUI */,
+				6FF88EA6151C547300834B91 /* LearningChineseAppDelegate.h */,
+				6FF88EA7151C547300834B91 /* LearningChineseAppDelegate.m */,
+				6FF88EA9151C547300834B91 /* MainStoryboard.storyboard */,
+				6FF88EAC151C547300834B91 /* LearningChineseViewController.h */,
+				6FF88EAD151C547300834B91 /* LearningChineseViewController.m */,
+				6FF88E9E151C547300834B91 /* Supporting Files */,
 			);
 			path = iLearnChinese;
 			sourceTree = "<group>";
 		};
-		9D95C735151C671D00C1AC1D /* Supporting Files */ = {
+		6FF88E9E151C547300834B91 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				9D95C736151C671D00C1AC1D /* iLearnChinese-Info.plist */,
-				9D95C737151C671D00C1AC1D /* InfoPlist.strings */,
-				9D95C73A151C671D00C1AC1D /* main.m */,
-				9D95C73C151C671D00C1AC1D /* iLearnChinese-Prefix.pch */,
+				6FF88E9F151C547300834B91 /* iLearnChinese-Info.plist */,
+				6FF88EA0151C547300834B91 /* InfoPlist.strings */,
+				6FF88EA3151C547300834B91 /* main.m */,
+				6FF88EA5151C547300834B91 /* iLearnChinese-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		9D95C755151C671D00C1AC1D /* iLearnChineseTests */ = {
+		6FF88EBA151C565800834B91 /* GUI */ = {
 			isa = PBXGroup;
 			children = (
-				9D95C75B151C671D00C1AC1D /* iLearnChineseTests.h */,
-				9D95C75C151C671D00C1AC1D /* iLearnChineseTests.m */,
-				9D95C756151C671D00C1AC1D /* Supporting Files */,
+				6FF88EB4151C551800834B91 /* LearningChineseGameOneViewController.h */,
+				6FF88EB5151C551800834B91 /* LearningChineseGameOneViewController.m */,
+				6FF88EB7151C552700834B91 /* LearningChineseGameTwoViewController.h */,
+				6FF88EB8151C552700834B91 /* LearningChineseGameTwoViewController.m */,
 			);
-			path = iLearnChineseTests;
+			name = GUI;
 			sourceTree = "<group>";
 		};
-		9D95C756151C671D00C1AC1D /* Supporting Files */ = {
+		6FF88EBB151C567500834B91 /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
-				9D95C757151C671D00C1AC1D /* iLearnChineseTests-Info.plist */,
-				9D95C758151C671D00C1AC1D /* InfoPlist.strings */,
+				6FF88EBC151C578400834B91 /* background.png */,
+				9D0A246E151C6A0300AC7811 /* background1.png */,
 			);
-			name = "Supporting Files";
+			name = Ressources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9D95C729151C671D00C1AC1D /* iLearnChinese */ = {
+		6FF88E92151C547300834B91 /* iLearnChinese */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9D95C760151C671D00C1AC1D /* Build configuration list for PBXNativeTarget "iLearnChinese" */;
+			buildConfigurationList = 6FF88EB1151C547300834B91 /* Build configuration list for PBXNativeTarget "iLearnChinese" */;
 			buildPhases = (
-				9D95C726151C671D00C1AC1D /* Sources */,
-				9D95C727151C671D00C1AC1D /* Frameworks */,
-				9D95C728151C671D00C1AC1D /* Resources */,
+				6FF88E8F151C547300834B91 /* Sources */,
+				6FF88E90151C547300834B91 /* Frameworks */,
+				6FF88E91151C547300834B91 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -171,158 +147,85 @@
 			);
 			name = iLearnChinese;
 			productName = iLearnChinese;
-			productReference = 9D95C72A151C671D00C1AC1D /* iLearnChinese.app */;
+			productReference = 6FF88E93151C547300834B91 /* iLearnChinese.app */;
 			productType = "com.apple.product-type.application";
-		};
-		9D95C74D151C671D00C1AC1D /* iLearnChineseTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9D95C763151C671D00C1AC1D /* Build configuration list for PBXNativeTarget "iLearnChineseTests" */;
-			buildPhases = (
-				9D95C749151C671D00C1AC1D /* Sources */,
-				9D95C74A151C671D00C1AC1D /* Frameworks */,
-				9D95C74B151C671D00C1AC1D /* Resources */,
-				9D95C74C151C671D00C1AC1D /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9D95C754151C671D00C1AC1D /* PBXTargetDependency */,
-			);
-			name = iLearnChineseTests;
-			productName = iLearnChineseTests;
-			productReference = 9D95C74E151C671D00C1AC1D /* iLearnChineseTests.octest */;
-			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		9D95C721151C671D00C1AC1D /* Project object */ = {
+		6FF88E8A151C547200834B91 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
-				ORGANIZATIONNAME = epitech;
+				CLASSPREFIX = LearningChinese;
+				LastUpgradeCheck = 0430;
 			};
-			buildConfigurationList = 9D95C724151C671D00C1AC1D /* Build configuration list for PBXProject "iLearnChinese" */;
+			buildConfigurationList = 6FF88E8D151C547200834B91 /* Build configuration list for PBXProject "iLearnChinese" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 9D95C71F151C671D00C1AC1D;
-			productRefGroup = 9D95C72B151C671D00C1AC1D /* Products */;
+			mainGroup = 6FF88E88151C547200834B91;
+			productRefGroup = 6FF88E94151C547300834B91 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9D95C729151C671D00C1AC1D /* iLearnChinese */,
-				9D95C74D151C671D00C1AC1D /* iLearnChineseTests */,
+				6FF88E92151C547300834B91 /* iLearnChinese */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9D95C728151C671D00C1AC1D /* Resources */ = {
+		6FF88E91151C547300834B91 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D95C739151C671D00C1AC1D /* InfoPlist.strings in Resources */,
-				9D95C742151C671D00C1AC1D /* MainStoryboard_iPhone.storyboard in Resources */,
-				9D95C745151C671D00C1AC1D /* MainStoryboard_iPad.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9D95C74B151C671D00C1AC1D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9D95C75A151C671D00C1AC1D /* InfoPlist.strings in Resources */,
+				6FF88EA2151C547300834B91 /* InfoPlist.strings in Resources */,
+				6FF88EAB151C547300834B91 /* MainStoryboard.storyboard in Resources */,
+				6FF88EBD151C578400834B91 /* background.png in Resources */,
+				9D0A246F151C6A0300AC7811 /* background1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		9D95C74C151C671D00C1AC1D /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		9D95C726151C671D00C1AC1D /* Sources */ = {
+		6FF88E8F151C547300834B91 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D95C73B151C671D00C1AC1D /* main.m in Sources */,
-				9D95C73F151C671D00C1AC1D /* AppDelegate.m in Sources */,
-				9D95C748151C671D00C1AC1D /* ViewController.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9D95C749151C671D00C1AC1D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9D95C75D151C671D00C1AC1D /* iLearnChineseTests.m in Sources */,
+				6FF88EA4151C547300834B91 /* main.m in Sources */,
+				6FF88EA8151C547300834B91 /* LearningChineseAppDelegate.m in Sources */,
+				6FF88EAE151C547300834B91 /* LearningChineseViewController.m in Sources */,
+				6FF88EB6151C551800834B91 /* LearningChineseGameOneViewController.m in Sources */,
+				6FF88EB9151C552700834B91 /* LearningChineseGameTwoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		9D95C754151C671D00C1AC1D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9D95C729151C671D00C1AC1D /* iLearnChinese */;
-			targetProxy = 9D95C753151C671D00C1AC1D /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		9D95C737151C671D00C1AC1D /* InfoPlist.strings */ = {
+		6FF88EA0151C547300834B91 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9D95C738151C671D00C1AC1D /* en */,
+				6FF88EA1151C547300834B91 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		9D95C740151C671D00C1AC1D /* MainStoryboard_iPhone.storyboard */ = {
+		6FF88EA9151C547300834B91 /* MainStoryboard.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9D95C741151C671D00C1AC1D /* en */,
+				6FF88EAA151C547300834B91 /* en */,
 			);
-			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		9D95C743151C671D00C1AC1D /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9D95C744151C671D00C1AC1D /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
-			sourceTree = "<group>";
-		};
-		9D95C758151C671D00C1AC1D /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9D95C759151C671D00C1AC1D /* en */,
-			);
-			name = InfoPlist.strings;
+			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		9D95C75E151C671D00C1AC1D /* Debug */ = {
+		6FF88EAF151C547300834B91 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -339,16 +242,15 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		9D95C75F151C671D00C1AC1D /* Release */ = {
+		6FF88EB0151C547300834B91 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -358,102 +260,64 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		9D95C761151C671D00C1AC1D /* Debug */ = {
+		6FF88EB2151C547300834B91 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iLearnChinese/iLearnChinese-Prefix.pch";
 				INFOPLIST_FILE = "iLearnChinese/iLearnChinese-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
-		9D95C762151C671D00C1AC1D /* Release */ = {
+		6FF88EB3151C547300834B91 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iLearnChinese/iLearnChinese-Prefix.pch";
 				INFOPLIST_FILE = "iLearnChinese/iLearnChinese-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		9D95C764151C671D00C1AC1D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iLearnChinese.app/iLearnChinese";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "iLearnChinese/iLearnChinese-Prefix.pch";
-				INFOPLIST_FILE = "iLearnChineseTests/iLearnChineseTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		9D95C765151C671D00C1AC1D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iLearnChinese.app/iLearnChinese";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "iLearnChinese/iLearnChinese-Prefix.pch";
-				INFOPLIST_FILE = "iLearnChineseTests/iLearnChineseTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9D95C724151C671D00C1AC1D /* Build configuration list for PBXProject "iLearnChinese" */ = {
+		6FF88E8D151C547200834B91 /* Build configuration list for PBXProject "iLearnChinese" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9D95C75E151C671D00C1AC1D /* Debug */,
-				9D95C75F151C671D00C1AC1D /* Release */,
+				6FF88EAF151C547300834B91 /* Debug */,
+				6FF88EB0151C547300834B91 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9D95C760151C671D00C1AC1D /* Build configuration list for PBXNativeTarget "iLearnChinese" */ = {
+		6FF88EB1151C547300834B91 /* Build configuration list for PBXNativeTarget "iLearnChinese" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9D95C761151C671D00C1AC1D /* Debug */,
-				9D95C762151C671D00C1AC1D /* Release */,
+				6FF88EB2151C547300834B91 /* Debug */,
+				6FF88EB3151C547300834B91 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		9D95C763151C671D00C1AC1D /* Build configuration list for PBXNativeTarget "iLearnChineseTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9D95C764151C671D00C1AC1D /* Debug */,
-				9D95C765151C671D00C1AC1D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 9D95C721151C671D00C1AC1D /* Project object */;
+	rootObject = 6FF88E8A151C547200834B91 /* Project object */;
 }

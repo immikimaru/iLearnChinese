@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="11D50b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="8sV-sY-5OU">
+    <dependencies>
+        <development defaultVersion="4200" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="933"/>
+    </dependencies>
+    <scenes>
+        <scene sceneID="9PY-HS-hTE">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g6f-BU-IrO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController definesPresentationContext="YES" id="8sV-sY-5OU" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="apF-iY-zgI">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="fFH-B4-Nz9" kind="relationship" relationship="rootViewController" id="Lsv-Zh-QYo"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-153" y="63"/>
+        </scene>
+        <scene sceneID="Wz7-sy-9db">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DXh-XH-pHs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="IjX-MC-7gI" customClass="LearningChineseGameOneViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ujf-L9-T8N">
+                        <rect key="frame" x="0.0" y="44" width="320" height="436"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Game one" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="fNQ-UR-TwV">
+                                <rect key="frame" x="120" y="197" width="80" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4gV-11-Zim"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="722" y="-516"/>
+        </scene>
+        <scene sceneID="V28-9U-8D6">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zTQ-jQ-HMq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="fFH-B4-Nz9" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ri4-qE-SuH">
+                        <rect key="frame" x="0.0" y="44" width="320" height="436"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JfB-Qq-uui">
+                                <rect key="frame" x="40" y="58" width="94" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Game 1">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="IjX-MC-7gI" kind="push" identifier="PushGameOne" id="JpI-S8-40M"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="J3m-nZ-bxM">
+                                <rect key="frame" x="40" y="108" width="94" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Game 2">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Eax-06-Ryx" kind="push" identifier="PushGameTwo" id="pEK-Cq-aNo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="f5D-4E-nvS">
+                                <rect key="frame" x="40" y="179" width="94" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="DataBase">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Yvy-fX-hG7" kind="push" identifier="PushDB" id="Bvq-4n-w03"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <rect key="contentStretch" x="0.39999999999999997" y="0.0" width="0.59999999999999964" height="1"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="iLearnChinese" id="OU7-Gb-Kfg"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="292" y="64"/>
+        </scene>
+        <scene sceneID="YZt-Uj-ohx">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eGc-VA-TDV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="Eax-06-Ryx" customClass="LearningChineseGameTwoViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vBR-FB-RL2">
+                        <rect key="frame" x="0.0" y="44" width="320" height="436"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Game two" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="oRC-pe-9Ae">
+                                <rect key="frame" x="121" y="197" width="79" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="iSy-Ra-9Ut"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="722" y="78"/>
+        </scene>
+        <scene sceneID="NGT-XG-h6o">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Nb-56-LG6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="Yvy-fX-hG7" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="eoj-0j-W8s">
+                        <rect key="frame" x="0.0" y="44" width="320" height="436"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="mdR-zZ-nKR">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Yvy-fX-hG7" id="cCh-Tu-0Lp"/>
+                            <outlet property="delegate" destination="Yvy-fX-hG7" id="gHA-PE-vdX"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="9jp-fr-K7S"/>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="722" y="717"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="LearningChineseGameOneViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LearningChineseGameOneViewController.h"/>
+        </class>
+        <class className="LearningChineseGameTwoViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LearningChineseGameTwoViewController.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
