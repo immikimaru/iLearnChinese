@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6FDFAC661522E2800065E70F /* LearningChineseDatabaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FDFAC651522E2800065E70F /* LearningChineseDatabaseViewController.m */; };
+		6FDFAC6D1522EA770065E70F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FDFAC6C1522EA770065E70F /* CoreData.framework */; };
+		6FDFAC701522EFCA0065E70F /* LearningChineseAddWordToDatabaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FDFAC6F1522EFCA0065E70F /* LearningChineseAddWordToDatabaseViewController.m */; };
 		6FF88E98151C547300834B91 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FF88E97151C547300834B91 /* UIKit.framework */; };
 		6FF88E9A151C547300834B91 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FF88E99151C547300834B91 /* Foundation.framework */; };
 		6FF88E9C151C547300834B91 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FF88E9B151C547300834B91 /* CoreGraphics.framework */; };
@@ -25,6 +27,9 @@
 /* Begin PBXFileReference section */
 		6FDFAC641522E2800065E70F /* LearningChineseDatabaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearningChineseDatabaseViewController.h; sourceTree = "<group>"; };
 		6FDFAC651522E2800065E70F /* LearningChineseDatabaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearningChineseDatabaseViewController.m; sourceTree = "<group>"; };
+		6FDFAC6C1522EA770065E70F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		6FDFAC6E1522EFCA0065E70F /* LearningChineseAddWordToDatabaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearningChineseAddWordToDatabaseViewController.h; sourceTree = "<group>"; };
+		6FDFAC6F1522EFCA0065E70F /* LearningChineseAddWordToDatabaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearningChineseAddWordToDatabaseViewController.m; sourceTree = "<group>"; };
 		6FF88E93151C547300834B91 /* iLearnChinese.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iLearnChinese.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FF88E97151C547300834B91 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6FF88E99151C547300834B91 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -51,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FDFAC6D1522EA770065E70F /* CoreData.framework in Frameworks */,
 				6FF88E98151C547300834B91 /* UIKit.framework in Frameworks */,
 				6FF88E9A151C547300834B91 /* Foundation.framework in Frameworks */,
 				6FF88E9C151C547300834B91 /* CoreGraphics.framework in Frameworks */,
@@ -60,6 +66,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6FDFAC711522EFD30065E70F /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				6FDFAC641522E2800065E70F /* LearningChineseDatabaseViewController.h */,
+				6FDFAC651522E2800065E70F /* LearningChineseDatabaseViewController.m */,
+				6FDFAC6E1522EFCA0065E70F /* LearningChineseAddWordToDatabaseViewController.h */,
+				6FDFAC6F1522EFCA0065E70F /* LearningChineseAddWordToDatabaseViewController.m */,
+			);
+			name = DB;
+			sourceTree = "<group>";
+		};
 		6FF88E88151C547200834B91 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +97,7 @@
 		6FF88E96151C547300834B91 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6FDFAC6C1522EA770065E70F /* CoreData.framework */,
 				6FF88E97151C547300834B91 /* UIKit.framework */,
 				6FF88E99151C547300834B91 /* Foundation.framework */,
 				6FF88E9B151C547300834B91 /* CoreGraphics.framework */,
@@ -116,12 +134,11 @@
 		6FF88EBA151C565800834B91 /* GUI */ = {
 			isa = PBXGroup;
 			children = (
+				6FDFAC711522EFD30065E70F /* DB */,
 				6FF88EB4151C551800834B91 /* LearningChineseGameOneViewController.h */,
 				6FF88EB5151C551800834B91 /* LearningChineseGameOneViewController.m */,
 				6FF88EB7151C552700834B91 /* LearningChineseGameTwoViewController.h */,
 				6FF88EB8151C552700834B91 /* LearningChineseGameTwoViewController.m */,
-				6FDFAC641522E2800065E70F /* LearningChineseDatabaseViewController.h */,
-				6FDFAC651522E2800065E70F /* LearningChineseDatabaseViewController.m */,
 			);
 			name = GUI;
 			sourceTree = "<group>";
@@ -206,6 +223,7 @@
 				6FF88EB6151C551800834B91 /* LearningChineseGameOneViewController.m in Sources */,
 				6FF88EB9151C552700834B91 /* LearningChineseGameTwoViewController.m in Sources */,
 				6FDFAC661522E2800065E70F /* LearningChineseDatabaseViewController.m in Sources */,
+				6FDFAC701522EFCA0065E70F /* LearningChineseAddWordToDatabaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

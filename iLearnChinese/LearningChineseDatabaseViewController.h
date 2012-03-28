@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LearningChineseAddWordToDatabaseViewController.h"
 
-@interface LearningChineseDatabaseViewController : UITableViewController
+@interface LearningChineseDatabaseViewController : UITableViewController <learningWordToDatabaseDelegate>
 
 @end
