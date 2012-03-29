@@ -35,10 +35,12 @@
 @property (weak, nonatomic) IBOutlet UITextField *answerField;
 
 - (IBAction)valideAnswer:(id)sender;
+- (BOOL)isChineseKeyboardActivated;
 
 - (void) loadDB;
 - (void) loadQuestion;
 - (void) updateScore;
 - (void) countDown;
+- (void) resetGame;
 
 @end

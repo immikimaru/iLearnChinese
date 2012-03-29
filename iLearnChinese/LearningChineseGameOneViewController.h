@@ -61,5 +61,6 @@
 - (void) loadQuestion;
 - (void) updateScore;
 - (void) countDown;
+- (void) resetGame;
 
 @end
