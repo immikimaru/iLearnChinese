@@ -13,10 +13,12 @@
 @end
 
 @implementation LearningChineseViewController
+@synthesize managedObjectContext = _managedObjectContext;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    // Setting up the databse
 }
 
 - (void)viewDidUnload
@@ -30,4 +32,17 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"PushDatabase"])
+    {
+        LearningChineseDatabaseViewController *words = segue.destinationViewController;
+        words.managedObjectContext = self.managedObjectContext;
+    }
+    else if ([segue.identifier isEqualToString:@"PushGameOne"])
+    {
+        ;
+    }
+}
 @end

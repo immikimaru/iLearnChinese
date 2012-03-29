@@ -15,11 +15,11 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="fFH-B4-Nz9" kind="relationship" relationship="rootViewController" id="Lsv-Zh-QYo"/>
+                        <segue destination="fFH-B4-Nz9" kind="relationship" relationship="rootViewController" id="quZ-WH-h8Y"/>
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="-153" y="63"/>
+            <point key="canvasLocation" x="-97" y="64"/>
         </scene>
         <!--Learning Chinese Game One View Controller-->
         <scene sceneID="Wz7-sy-9db">
@@ -45,11 +45,11 @@
             </objects>
             <point key="canvasLocation" x="722" y="-516"/>
         </scene>
-        <!--View Controller - iLearnChinese-->
+        <!--Learning Chinese View Controller - iLearnChinese-->
         <scene sceneID="V28-9U-8D6">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zTQ-jQ-HMq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="fFH-B4-Nz9" sceneMemberID="viewController">
+                <viewController id="fFH-B4-Nz9" customClass="LearningChineseViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ri4-qE-SuH">
                         <rect key="frame" x="0.0" y="44" width="320" height="436"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -96,7 +96,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Yvy-fX-hG7" kind="push" identifier="PushDB" id="Bvq-4n-w03"/>
+                                    <segue destination="Yvy-fX-hG7" kind="push" identifier="PushDatabase" id="fAz-SS-XUS"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -138,19 +138,22 @@
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Nb-56-LG6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="Yvy-fX-hG7" customClass="LearningChineseDatabaseViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="eoj-0j-W8s">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="53" sectionHeaderHeight="22" sectionFooterHeight="22" id="eoj-0j-W8s">
                         <rect key="frame" x="0.0" y="44" width="320" height="436"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Words Cell" id="mdR-zZ-nKR">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Words Cell" rowHeight="53" id="mdR-zZ-nKR">
+                                <rect key="frame" x="0.0" y="22" width="320" height="53"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="52"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <connections>
+                                    <segue destination="VCI-EW-3eL" kind="push" identifier="Word Detail Segue" id="nZl-17-naP"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -247,28 +250,103 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="chineseTextField" destination="dy3-oe-zjz" id="JFk-IZ-rhu"/>
+                        <outlet property="englishTextField" destination="FMf-6c-voQ" id="rfg-Cd-4CE"/>
+                        <outlet property="pinyinTextField" destination="wpM-Xj-Iks" id="Q7h-FF-Jr7"/>
+                    </connections>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="1087" y="717"/>
         </scene>
+        <!--Learning Chinese Word Detail View Controller - Edit Word-->
+        <scene sceneID="OtX-Zo-mWc">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5rI-ce-A4h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="VCI-EW-3eL" customClass="LearningChineseWordDetailViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Hvz-gk-FwM">
+                        <rect key="frame" x="0.0" y="44" width="320" height="436"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Edit the word" id="6L1-Vm-MRm">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Add Words Cell" id="wwf-Ed-c7y">
+                                        <rect key="frame" x="0.0" y="46" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="english" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" id="tLK-Ez-zrM">
+                                                    <rect key="frame" x="20" y="6" width="260" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Words Cell" id="H6g-iT-Mvm">
+                                        <rect key="frame" x="0.0" y="91" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="pinyin" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" id="LNw-O1-9Wy">
+                                                    <rect key="frame" x="20" y="6" width="260" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Words Cell" id="zew-zh-6iO">
+                                        <rect key="frame" x="0.0" y="135" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="chinese" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" id="kd1-zB-EWG">
+                                                    <rect key="frame" x="20" y="6" width="260" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="VCI-EW-3eL" id="CuU-vr-cCF"/>
+                            <outlet property="delegate" destination="VCI-EW-3eL" id="y6I-b6-BS2"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Edit Word" id="fHC-eu-Bmx">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="XJ7-xk-PAB">
+                            <connections>
+                                <action selector="save:" destination="VCI-EW-3eL" id="hh0-6n-EcF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="chineseTextField" destination="kd1-zB-EWG" id="K9T-1m-tIE"/>
+                        <outlet property="englishTextField" destination="tLK-Ez-zrM" id="rj5-ns-Txn"/>
+                        <outlet property="pinyinTextField" destination="LNw-O1-9Wy" id="9DY-zn-Ewc"/>
+                    </connections>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="1087" y="1320"/>
+        </scene>
     </scenes>
-    <classes>
-        <class className="LearningChineseAddWordToDatabaseViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LearningChineseAddWordToDatabaseViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="save:"/>
-            </relationships>
-        </class>
-        <class className="LearningChineseDatabaseViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LearningChineseDatabaseViewController.h"/>
-        </class>
-        <class className="LearningChineseGameOneViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LearningChineseGameOneViewController.h"/>
-        </class>
-        <class className="LearningChineseGameTwoViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LearningChineseGameTwoViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F9E408D15237F4200DACAD3 /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9E408715237BEF00DACAD3 /* CoreDataTableViewController.m */; };
 		6FDFAC661522E2800065E70F /* LearningChineseDatabaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FDFAC651522E2800065E70F /* LearningChineseDatabaseViewController.m */; };
 		6FDFAC6D1522EA770065E70F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FDFAC6C1522EA770065E70F /* CoreData.framework */; };
 		6FDFAC701522EFCA0065E70F /* LearningChineseAddWordToDatabaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FDFAC6F1522EFCA0065E70F /* LearningChineseAddWordToDatabaseViewController.m */; };
+		6FDFACAC152303D20065E70F /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6FDFACAA152303D20065E70F /* Model.xcdatamodeld */; };
+		6FDFACAF152305A10065E70F /* Word.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FDFACAE152305A10065E70F /* Word.m */; };
 		6FF88E98151C547300834B91 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FF88E97151C547300834B91 /* UIKit.framework */; };
 		6FF88E9A151C547300834B91 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FF88E99151C547300834B91 /* Foundation.framework */; };
 		6FF88E9C151C547300834B91 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FF88E9B151C547300834B91 /* CoreGraphics.framework */; };
@@ -21,15 +24,21 @@
 		6FF88EB6151C551800834B91 /* LearningChineseGameOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF88EB5151C551800834B91 /* LearningChineseGameOneViewController.m */; };
 		6FF88EB9151C552700834B91 /* LearningChineseGameTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF88EB8151C552700834B91 /* LearningChineseGameTwoViewController.m */; };
 		6FF88EBD151C578400834B91 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FF88EBC151C578400834B91 /* background.png */; };
+		6FFF873215240CD70039B1BB /* LearningChineseWordDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FFF873115240CD70039B1BB /* LearningChineseWordDetailViewController.m */; };
 		9D0A246F151C6A0300AC7811 /* background1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D0A246E151C6A0300AC7811 /* background1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6F9E408615237BEF00DACAD3 /* CoreDataTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataTableViewController.h; sourceTree = "<group>"; };
+		6F9E408715237BEF00DACAD3 /* CoreDataTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataTableViewController.m; sourceTree = "<group>"; };
 		6FDFAC641522E2800065E70F /* LearningChineseDatabaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearningChineseDatabaseViewController.h; sourceTree = "<group>"; };
 		6FDFAC651522E2800065E70F /* LearningChineseDatabaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearningChineseDatabaseViewController.m; sourceTree = "<group>"; };
 		6FDFAC6C1522EA770065E70F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		6FDFAC6E1522EFCA0065E70F /* LearningChineseAddWordToDatabaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearningChineseAddWordToDatabaseViewController.h; sourceTree = "<group>"; };
 		6FDFAC6F1522EFCA0065E70F /* LearningChineseAddWordToDatabaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearningChineseAddWordToDatabaseViewController.m; sourceTree = "<group>"; };
+		6FDFACAB152303D20065E70F /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		6FDFACAD152305A10065E70F /* Word.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Word.h; sourceTree = "<group>"; };
+		6FDFACAE152305A10065E70F /* Word.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Word.m; sourceTree = "<group>"; };
 		6FF88E93151C547300834B91 /* iLearnChinese.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iLearnChinese.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FF88E97151C547300834B91 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6FF88E99151C547300834B91 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -48,6 +57,8 @@
 		6FF88EB7151C552700834B91 /* LearningChineseGameTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearningChineseGameTwoViewController.h; sourceTree = "<group>"; };
 		6FF88EB8151C552700834B91 /* LearningChineseGameTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearningChineseGameTwoViewController.m; sourceTree = "<group>"; };
 		6FF88EBC151C578400834B91 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		6FFF873015240CD70039B1BB /* LearningChineseWordDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearningChineseWordDetailViewController.h; sourceTree = "<group>"; };
+		6FFF873115240CD70039B1BB /* LearningChineseWordDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearningChineseWordDetailViewController.m; sourceTree = "<group>"; };
 		9D0A246E151C6A0300AC7811 /* background1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,6 +77,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6F169C5415245A860059002A /* Games */ = {
+			isa = PBXGroup;
+			children = (
+				6FF88EB4151C551800834B91 /* LearningChineseGameOneViewController.h */,
+				6FF88EB5151C551800834B91 /* LearningChineseGameOneViewController.m */,
+				6FF88EB7151C552700834B91 /* LearningChineseGameTwoViewController.h */,
+				6FF88EB8151C552700834B91 /* LearningChineseGameTwoViewController.m */,
+			);
+			name = Games;
+			sourceTree = "<group>";
+		};
 		6FDFAC711522EFD30065E70F /* DB */ = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +95,28 @@
 				6FDFAC651522E2800065E70F /* LearningChineseDatabaseViewController.m */,
 				6FDFAC6E1522EFCA0065E70F /* LearningChineseAddWordToDatabaseViewController.h */,
 				6FDFAC6F1522EFCA0065E70F /* LearningChineseAddWordToDatabaseViewController.m */,
+				6FFF873015240CD70039B1BB /* LearningChineseWordDetailViewController.h */,
+				6FFF873115240CD70039B1BB /* LearningChineseWordDetailViewController.m */,
+			);
+			name = DB;
+			sourceTree = "<group>";
+		};
+		6FDFACA6152300180065E70F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6FDFACA71523001F0065E70F /* DB */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		6FDFACA71523001F0065E70F /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				6F9E408615237BEF00DACAD3 /* CoreDataTableViewController.h */,
+				6F9E408715237BEF00DACAD3 /* CoreDataTableViewController.m */,
+				6FDFACAA152303D20065E70F /* Model.xcdatamodeld */,
+				6FDFACAD152305A10065E70F /* Word.h */,
+				6FDFACAE152305A10065E70F /* Word.m */,
 			);
 			name = DB;
 			sourceTree = "<group>";
@@ -108,6 +152,7 @@
 		6FF88E9D151C547300834B91 /* iLearnChinese */ = {
 			isa = PBXGroup;
 			children = (
+				6FDFACA6152300180065E70F /* Controller */,
 				6FF88EBB151C567500834B91 /* Ressources */,
 				6FF88EBA151C565800834B91 /* GUI */,
 				6FF88EA6151C547300834B91 /* LearningChineseAppDelegate.h */,
@@ -134,11 +179,8 @@
 		6FF88EBA151C565800834B91 /* GUI */ = {
 			isa = PBXGroup;
 			children = (
+				6F169C5415245A860059002A /* Games */,
 				6FDFAC711522EFD30065E70F /* DB */,
-				6FF88EB4151C551800834B91 /* LearningChineseGameOneViewController.h */,
-				6FF88EB5151C551800834B91 /* LearningChineseGameOneViewController.m */,
-				6FF88EB7151C552700834B91 /* LearningChineseGameTwoViewController.h */,
-				6FF88EB8151C552700834B91 /* LearningChineseGameTwoViewController.m */,
 			);
 			name = GUI;
 			sourceTree = "<group>";
@@ -217,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F9E408D15237F4200DACAD3 /* CoreDataTableViewController.m in Sources */,
 				6FF88EA4151C547300834B91 /* main.m in Sources */,
 				6FF88EA8151C547300834B91 /* LearningChineseAppDelegate.m in Sources */,
 				6FF88EAE151C547300834B91 /* LearningChineseViewController.m in Sources */,
@@ -224,6 +267,9 @@
 				6FF88EB9151C552700834B91 /* LearningChineseGameTwoViewController.m in Sources */,
 				6FDFAC661522E2800065E70F /* LearningChineseDatabaseViewController.m in Sources */,
 				6FDFAC701522EFCA0065E70F /* LearningChineseAddWordToDatabaseViewController.m in Sources */,
+				6FDFACAC152303D20065E70F /* Model.xcdatamodeld in Sources */,
+				6FDFACAF152305A10065E70F /* Word.m in Sources */,
+				6FFF873215240CD70039B1BB /* LearningChineseWordDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +388,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6FDFACAA152303D20065E70F /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6FDFACAB152303D20065E70F /* Model.xcdatamodel */,
+			);
+			currentVersion = 6FDFACAB152303D20065E70F /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 6FF88E8A151C547200834B91 /* Project object */;
 }
