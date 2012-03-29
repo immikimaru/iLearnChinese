@@ -33,10 +33,23 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    bool isLaunchable = [self isChineseKeyboardActivated];
+    if (!isLaunchable)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Chinese keyboard not activated" message:@"You need to activate the 'Chinese-Simplified (Handwriting)' keyboard to play this game. Would you like to activate this keyboard ?" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes",nil];
+        [alert show];
+        return;
+    }
     // Load virtual DB
     [self loadDB];
     // Launch a game
     [self resetGame];
+}
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 1) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=//Settings/Keyboard/Keyboards"]];
+    }
 }
 
 - (void)viewDidUnload
@@ -49,6 +62,25 @@
     [self setAnswerField:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
+}
+
+- (BOOL)isChineseKeyboardActivated
+{
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    NSDictionary* defaults = [[NSUserDefaults standardUserDefaults] dictionaryRepresentation];
+    // NSLog(@"Value : %@", [defaults objectForKey:@"AppleKeyboards"]);
+    // NSLog(@"Subvalue : %@", [[defaults objectForKey:@"AppleKeyboards"] objectAtIndex:0]);
+    NSString *chineseKeyboard = [[NSString alloc] initWithString:@"zh_Hans-HWR@sw=HWR"];
+    id appleKeyboards = [defaults objectForKey:@"AppleKeyboards"];
+    for (int i = 0; i < [appleKeyboards count]; i++)
+    {
+        if ([chineseKeyboard isEqual:[appleKeyboards objectAtIndex:i]])
+        {
+            NSLog(@"Launchable okay");
+            return YES;
+        }
+    }
+    return NO;
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)theTextField {
