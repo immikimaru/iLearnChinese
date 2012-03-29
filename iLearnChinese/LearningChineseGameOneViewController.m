@@ -41,18 +41,6 @@
 	// Do any additional setup after loading the view, typically from a nib.
 
     // Load the CoreData DB
-    NSLog(@"[JL DEBUG %s] LOAD DB : %@", __func__, self.managedObjectContext);
-    
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Word" inManagedObjectContext:self.managedObjectContext];
-    [fetchRequest setEntity:entity];
-    NSError *error;
-    NSArray *db = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
-    for (NSManagedObject *word in db)
-    {
-        NSLog(@"\nEnglish : %@\nPinyin : %@\nChinese : %@", [word valueForKey:@"english"], [word valueForKey:@"pinyin"], [word valueForKey:@"chinese"]);
-    }
-    // Load virtual DB
     [self loadDB];
     // Launch a game
     [self resetGame];
@@ -77,34 +65,34 @@
     // Random a question
     UIColor *black = [UIColor blackColor];
     
-    one = (arc4random() % countDB) * 2 + 1;
-    two = (arc4random() % countDB) * 2 + 1;
+    one = (arc4random() % countDB);
+    two = (arc4random() % countDB);
     while (one == two)
-        two = (arc4random() % countDB) * 2 + 1;
-    three = (arc4random() % countDB) * 2 + 1;
+        two = (arc4random() % countDB);
+    three = (arc4random() % countDB);
     while (one == three || two == three)
-        three = (arc4random() % countDB) * 2 + 1;
-    four = (arc4random() % countDB) * 2 + 1;
+        three = (arc4random() % countDB);
+    four = (arc4random() % countDB);
     while (one == four || two == four || three == four)
-        four = (arc4random() % countDB) * 2 + 1;
+        four = (arc4random() % countDB);
     
     // Reset the button to initial state
-    [answerOne setTitle:[myDB objectAtIndex:one] forState:UIControlStateNormal];
+    [answerOne setTitle:[[myDB objectAtIndex:one] valueForKey:@"english"] forState:UIControlStateNormal];
     answerOne.titleLabel.textColor = black;
     [answerOne setHidden:NO];
     [answerOne setEnabled:YES];
     
-	[answerTwo setTitle:[myDB objectAtIndex:two] forState:UIControlStateNormal];
+	[answerTwo setTitle:[[myDB objectAtIndex:two] valueForKey:@"english"]  forState:UIControlStateNormal];
     answerTwo.titleLabel.textColor = black;
     [answerTwo setHidden:NO];
     [answerTwo setEnabled:YES];
     
-	[answerThree setTitle:[myDB objectAtIndex:three] forState:UIControlStateNormal];
+	[answerThree setTitle:[[myDB objectAtIndex:three] valueForKey:@"english"]forState:UIControlStateNormal];
     answerThree.titleLabel.textColor = black;
     [answerThree setHidden:NO];
     [answerThree setEnabled:YES];
     
-	[answerFour setTitle:[myDB objectAtIndex:four] forState:UIControlStateNormal];
+	[answerFour setTitle:[[myDB objectAtIndex:four] valueForKey:@"english"]forState:UIControlStateNormal];
     answerFour.titleLabel.textColor = black;
 	[answerFour setHidden:NO];
     [answerFour setEnabled:YES];
@@ -128,10 +116,10 @@
     }
     
     // Save the right answer & ask the question
-    rightAnswer = [myDB objectAtIndex:right];
+    rightAnswer = [[myDB objectAtIndex:right] valueForKey:@"english"];
     nbQuestions++;
     nbQuestion.text = [[NSString alloc] initWithFormat:@"Question %i :", nbQuestions];
-    question.text = [[NSString alloc] initWithFormat:@"%@", [myDB objectAtIndex:(right - 1)]];
+    question.text = [[NSString alloc] initWithFormat:@"%@", [[myDB objectAtIndex:right] valueForKey:@"chinese"]];
     // Set purpose of the game
     purpose.text = @"Find the meaning !";
     
@@ -141,42 +129,14 @@
 
 - (void) loadDB
 {
-    // Virtual DB for prototype
-    NSArray *quizArray = [[NSArray alloc] initWithObjects:
-                          @"护照",      @"Passport",
-                          @"入境卡",    @"Entry card",
-                          @"机票",      @"Plane ticket",
-                          @"登记卡",    @"Boarding pass",
-                          @"学习",      @"Study",
-                          @"工作",      @"Work",
-                          @"经商",      @"Do business",
-                          @"目的",      @"Purpose",
-                          @"陆游",      @"Travel",
-                          @"来",       @"Come",
-                          @"中国",      @"China",
-                          @"箱子",      @"Suitcase",
-                          @"背包",      @"Backpack",
-                          @"行李",      @"Luggage",
-                          @"袋子",      @"Bag",
-                          @"出口",      @"Exit",
-                          @"入口",      @"Entrance",
-                          @"时间表",    @"Timetable",
-                          @"抵达",      @"Arrival",
-                          @"出发",      @"Departure",
-                          @"需要",      @"Need",
-                          @"相机",      @"Camera",
-                          @"书",       @"Books",
-                          @"光盘",      @"CD",
-                          @"申报",      @"Declaration",
-                          @"动物",      @"Dog",
-                          @"可以",      @"Can",
-                          @"带入",      @"Bring",
-                          @"水果",       @"Fruits",
-                          @"肉制品",     @"Meat products",
-                          @"植物",      @"Plants",
-                          nil];
-    countDB = quizArray.count / 2;
-	myDB = quizArray;
+    
+    NSLog(@"[JL DEBUG %s] LOAD DB : %@", __func__, self.managedObjectContext);
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Word" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    NSError *error;
+    myDB = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    countDB = myDB.count;
 }
 
 - (void)countDown
@@ -228,7 +188,7 @@
 - (void)checkAnswer:(NSInteger)answer
 {
     
-    if (rightAnswer == [myDB objectAtIndex:answer])
+    if (rightAnswer == [[myDB objectAtIndex:answer] valueForKey:@"english"])
     {
         purpose.text = @"很好！You scored.";
         goodAnswer++;
