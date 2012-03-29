@@ -85,6 +85,7 @@
     rightAnswer = arc4random() % countDB;
     nbQuestions++;
     nbQuestion.text = [[NSString alloc] initWithFormat:@"Question %i:", nbQuestions];
+    //question.text = [[NSString alloc] initWithFormat:[[myDB objectAtIndex:rightAnswer] valueForKey:@"pinyin"]];
     question.text = [[NSString alloc] initWithFormat:[myDB objectAtIndex:(rightAnswer * 2 + 1)]];
     // Set purpose of the game
     purpose.text = @"Draw the chinese character !";
@@ -96,6 +97,14 @@
 
 - (void) loadDB
 {
+    // Uncomment when real database is implemented
+    /*    NSLog(@"[JL DEBUG %s] LOAD DB : %@", __func__, self.managedObjectContext);
+     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Word" inManagedObjectContext:self.managedObjectContext];
+     [fetchRequest setEntity:entity];
+     NSError *error;
+     myDB = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+     countDB = myDB.count;*/
     // Virtual DB for prototype
    NSArray *quizArray = [[NSArray alloc] initWithObjects:
                           @"护照",      @"Passport",
@@ -193,6 +202,7 @@
 }
 
 - (IBAction)valideAnswer:(id)sender {
+    //if([answerField.text isEqual:[[myDB objectAtIndex:rightAnswer] valueForKey:@"chinese"]])
     if ([answerField.text isEqual:[myDB objectAtIndex:rightAnswer * 2]])
     {
         purpose.text = @"很好！You scored.";
@@ -202,6 +212,7 @@
     else
     {
         purpose.text = @"That's wrong, too bad...";
+        //question.text = [[NSString alloc] initWithFormat:@"The right answer was %@", [[myDB objectAtIndex:rightAnswer] valueForKey:@"chinese"]];
         question.text = [[NSString alloc] initWithFormat:@"%@ != %@", answerField.text, [myDB objectAtIndex:rightAnswer * 2]];
         actualScore -= 2;
     }
