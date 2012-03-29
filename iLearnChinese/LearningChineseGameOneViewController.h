@@ -37,6 +37,9 @@
     NSString *rightAnswer;
 }
 
+// use for the DB
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+
 @property (weak, nonatomic) IBOutlet UILabel *purpose;
 @property (weak, nonatomic) IBOutlet UILabel *question;
 @property (weak, nonatomic) IBOutlet UIButton *answerOne;

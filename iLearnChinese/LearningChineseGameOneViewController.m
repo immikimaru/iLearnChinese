@@ -7,12 +7,14 @@
 //
 
 #import "LearningChineseGameOneViewController.h"
+#import <CoreData/CoreData.h>
 
 @interface LearningChineseGameOneViewController ()
 
 @end
 
 @implementation LearningChineseGameOneViewController
+@synthesize managedObjectContext;
 @synthesize purpose;
 @synthesize question;
 @synthesize answerOne;
@@ -37,6 +39,19 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+
+    // Load the CoreData DB
+    NSLog(@"[JL DEBUG %s] LOAD DB : %@", __func__, self.managedObjectContext);
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Word" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    NSError *error;
+    NSArray *db = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    for (NSManagedObject *word in db)
+    {
+        NSLog(@"\nEnglish : %@\nPinyin : %@\nChinese : %@", [word valueForKey:@"english"], [word valueForKey:@"pinyin"], [word valueForKey:@"chinese"]);
+    }
     // Load virtual DB
     [self loadDB];
     // Launch a game

@@ -115,7 +115,8 @@
         NSLog(@"Passing selected role (%@) to RoleDetailTVC", self.selectedWord.english);
         wordDetail.word = self.selectedWord;
     }
-    else {
+    else
+    {
         NSLog(@"Unidentified Segue Attempted!");
     }
 }

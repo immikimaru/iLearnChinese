@@ -42,7 +42,8 @@
     }
     else if ([segue.identifier isEqualToString:@"PushGameOne"])
     {
-        ;
+        LearningChineseGameOneViewController *words = segue.destinationViewController;
+        words.managedObjectContext = self.managedObjectContext;
     }
 }
 @end
