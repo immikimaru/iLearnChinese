@@ -74,7 +74,7 @@
     else if ([segue.identifier isEqualToString:@"PushGameTwo"])
     {
         LearningChineseGameTwoViewController *words = segue.destinationViewController;
-        //words.managedObjectContext = self.managedObjectContext;
+        words.managedObjectContext = self.managedObjectContext;
     }
 }
 - (IBAction)game2Button:(id)sender

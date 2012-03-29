@@ -6,13 +6,16 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
+#import <CoreData/CoreData.h>
 #import "LearningChineseGameTwoViewController.h"
+#import "Word.h"
 
 @interface LearningChineseGameTwoViewController ()
 
 @end
 
 @implementation LearningChineseGameTwoViewController
+@synthesize managedObjectContext;
 @synthesize purpose;
 @synthesize nbQuestion;
 @synthesize question;
@@ -98,13 +101,20 @@
 - (void) loadDB
 {
     // Uncomment when real database is implemented
-    /*    NSLog(@"[JL DEBUG %s] LOAD DB : %@", __func__, self.managedObjectContext);
      NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
      NSEntityDescription *entity = [NSEntityDescription entityForName:@"Word" inManagedObjectContext:self.managedObjectContext];
      [fetchRequest setEntity:entity];
      NSError *error;
      myDB = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
-     countDB = myDB.count;*/
+     countDB = myDB.count;
+#warning I'm fabulous
+    // Data are loaded. Something must be wrong in the algorithm didn't check further. Need some sleep :)
+    for (Word *word in myDB)
+    {
+        NSLog(@"[JL DEBUG %s]\nE: %@\nC: %@", __func__, word.english, word.chinese);
+    }
+    NSLog(@"[JL DEBUG %s] LOAD DB : %i", __func__, countDB);
+    /*
     // Virtual DB for prototype
    NSArray *quizArray = [[NSArray alloc] initWithObjects:
                           @"护照",      @"Passport",
@@ -140,7 +150,7 @@
                           @"植物",      @"Plants",
                           nil];
     countDB = quizArray.count / 2;
-	myDB = quizArray;
+	myDB = quizArray;*/
 }
 
 - (void)countDown

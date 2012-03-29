@@ -26,6 +26,8 @@
     NSArray *myDB;
     NSInteger countDB;
 }
+// use for the DB
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @property (weak, nonatomic) IBOutlet UILabel *purpose;
 @property (weak, nonatomic) IBOutlet UILabel *nbQuestion;
