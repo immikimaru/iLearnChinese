@@ -79,7 +79,6 @@
 }
 - (IBAction)game2Button:(id)sender
 {
-    NSLog(@"TEST Game two");
     bool isLaunchable = [self isChineseKeyboardActivated];
     if (!isLaunchable)
     {

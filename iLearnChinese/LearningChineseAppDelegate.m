@@ -21,18 +21,10 @@
 {
     // Setting up the databse
     
-    
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
     
     LearningChineseViewController *mainViewController = (LearningChineseViewController *)[[navigationController viewControllers] objectAtIndex:0];
     mainViewController.managedObjectContext = self.managedObjectContext;
-    
-    //LearningChineseDatabaseViewController *firstViewController = (LearningChineseDatabaseViewController *) [[navigationController viewControllers] objectAtIndex:0];
-    //LearningChineseDatabaseViewController *controller = [[LearningChineseDatabaseViewController alloc] init];
-    //LearningChineseDatabaseViewController *controller = (LearningChineseDatabaseViewController *)navigationController.view;
-    
-    //firstViewController.managedObjectContext = self.managedObjectContext;
-    
     
     // Override point for customization after application launch.
     // Setup the background
@@ -121,12 +113,29 @@
     if (__persistentStoreCoordinator != nil) {
         return __persistentStoreCoordinator;
     }
+    //NSString *storePath = [[self applicationDocumentsDirectory] stringByAppendingPathComponent: @"WordManager.sqlite"];
+    NSString *storePath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, 
+                                                            NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"WordManager.sqlite"];
+    NSURL *storeUrl = [NSURL fileURLWithPath:storePath];
+    //NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"WordManager.sqlite"];
     
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"WordManager.sqlite"];
     
+    // Put down default db if it doesn't already exist
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    if (![fileManager fileExistsAtPath:storePath]) {
+        NSString *defaultStorePath = [[NSBundle mainBundle] pathForResource:@"WordManager" ofType:@"sqlite"];
+        NSLog(@"DefaultStorePath %@", defaultStorePath);
+        if (defaultStorePath) {
+            [fileManager copyItemAtPath:defaultStorePath toPath:storePath error:NULL];
+        }
+    }
+    else {
+        NSLog(@"The database already exist");
+    }
+     
     NSError *error = nil;
     __persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
-    if (![__persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error])
+    if (![__persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeUrl options:nil error:&error])
     {
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();

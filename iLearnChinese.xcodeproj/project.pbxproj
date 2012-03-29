@@ -62,6 +62,7 @@
 		6FF88EBC151C578400834B91 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		6FFB47C61524AFEE00798148 /* LearningChineseGameThreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearningChineseGameThreeViewController.h; sourceTree = "<group>"; };
 		6FFB47C71524AFEE00798148 /* LearningChineseGameThreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearningChineseGameThreeViewController.m; sourceTree = "<group>"; };
+		6FFB47C91524C78000798148 /* WordManager.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = WordManager.sqlite; sourceTree = "<group>"; };
 		6FFF873015240CD70039B1BB /* LearningChineseWordDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearningChineseWordDetailViewController.h; sourceTree = "<group>"; };
 		6FFF873115240CD70039B1BB /* LearningChineseWordDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearningChineseWordDetailViewController.m; sourceTree = "<group>"; };
 		9D0A246E151C6A0300AC7811 /* background1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background1.png; sourceTree = "<group>"; };
@@ -199,6 +200,7 @@
 		6FF88EBB151C567500834B91 /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
+				6FFB47C91524C78000798148 /* WordManager.sqlite */,
 				6FF88EBC151C578400834B91 /* background.png */,
 				9D0A246E151C6A0300AC7811 /* background1.png */,
 			);
