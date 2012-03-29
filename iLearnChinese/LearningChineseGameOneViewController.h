@@ -9,5 +9,54 @@
 #import <UIKit/UIKit.h>
 
 @interface LearningChineseGameOneViewController : UIViewController
+{
+    // Question number
+    NSInteger one;
+    NSInteger two;
+    NSInteger three;
+    NSInteger four;
+    NSInteger right;
+    
+    // Score
+    //IBOutlet UILabel *myScore;
+    NSInteger actualScore;
+    NSInteger nbQuestions;
+    NSInteger goodAnswer;
+    
+    // Timer
+    //IBOutlet UILabel *timeLeft;
+    NSInteger time;
+    NSInteger restTime;
+    BOOL isResting;
+    NSTimer *timer;
+    
+    // A supprimer sur la vraie version
+    NSArray *myDB;
+    NSInteger countDB;
+    
+    NSString *rightAnswer;
+}
+
+@property (weak, nonatomic) IBOutlet UILabel *purpose;
+@property (weak, nonatomic) IBOutlet UILabel *question;
+@property (weak, nonatomic) IBOutlet UIButton *answerOne;
+@property (weak, nonatomic) IBOutlet UIButton *answerTwo;
+@property (weak, nonatomic) IBOutlet UIButton *answerThree;
+@property (weak, nonatomic) IBOutlet UIButton *answerFour;
+@property (weak, nonatomic) IBOutlet UILabel *myScore;
+@property (weak, nonatomic) IBOutlet UILabel *timeLeft;
+@property (weak, nonatomic) IBOutlet UILabel *nbQuestion;
+
+- (IBAction)selectOne:(id)sender;
+- (IBAction)selectTwo:(id)sender;
+- (IBAction)selectThree:(id)sender;
+- (IBAction)selectFour:(id)sender;
+
+
+- (void) checkAnswer:(NSInteger)answer;
+- (void) loadDB;
+- (void) loadQuestion;
+- (void) updateScore;
+- (void) countDown;
 
 @end
