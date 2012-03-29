@@ -24,6 +24,7 @@
 		6FF88EB6151C551800834B91 /* LearningChineseGameOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF88EB5151C551800834B91 /* LearningChineseGameOneViewController.m */; };
 		6FF88EB9151C552700834B91 /* LearningChineseGameTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF88EB8151C552700834B91 /* LearningChineseGameTwoViewController.m */; };
 		6FF88EBD151C578400834B91 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FF88EBC151C578400834B91 /* background.png */; };
+		6FFB47C81524AFEE00798148 /* LearningChineseGameThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FFB47C71524AFEE00798148 /* LearningChineseGameThreeViewController.m */; };
 		6FFF873215240CD70039B1BB /* LearningChineseWordDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FFF873115240CD70039B1BB /* LearningChineseWordDetailViewController.m */; };
 		9D0A246F151C6A0300AC7811 /* background1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D0A246E151C6A0300AC7811 /* background1.png */; };
 		9D13EAA5152465C000B4BB5B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D13EAA4152465C000B4BB5B /* Default@2x.png */; };
@@ -59,6 +60,8 @@
 		6FF88EB7151C552700834B91 /* LearningChineseGameTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearningChineseGameTwoViewController.h; sourceTree = "<group>"; };
 		6FF88EB8151C552700834B91 /* LearningChineseGameTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearningChineseGameTwoViewController.m; sourceTree = "<group>"; };
 		6FF88EBC151C578400834B91 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		6FFB47C61524AFEE00798148 /* LearningChineseGameThreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearningChineseGameThreeViewController.h; sourceTree = "<group>"; };
+		6FFB47C71524AFEE00798148 /* LearningChineseGameThreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearningChineseGameThreeViewController.m; sourceTree = "<group>"; };
 		6FFF873015240CD70039B1BB /* LearningChineseWordDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearningChineseWordDetailViewController.h; sourceTree = "<group>"; };
 		6FFF873115240CD70039B1BB /* LearningChineseWordDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearningChineseWordDetailViewController.m; sourceTree = "<group>"; };
 		9D0A246E151C6A0300AC7811 /* background1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background1.png; sourceTree = "<group>"; };
@@ -88,6 +91,8 @@
 				6FF88EB5151C551800834B91 /* LearningChineseGameOneViewController.m */,
 				6FF88EB7151C552700834B91 /* LearningChineseGameTwoViewController.h */,
 				6FF88EB8151C552700834B91 /* LearningChineseGameTwoViewController.m */,
+				6FFB47C61524AFEE00798148 /* LearningChineseGameThreeViewController.h */,
+				6FFB47C71524AFEE00798148 /* LearningChineseGameThreeViewController.m */,
 			);
 			name = Games;
 			sourceTree = "<group>";
@@ -278,6 +283,7 @@
 				6FDFACAC152303D20065E70F /* Model.xcdatamodeld in Sources */,
 				6FDFACAF152305A10065E70F /* Word.m in Sources */,
 				6FFF873215240CD70039B1BB /* LearningChineseWordDetailViewController.m in Sources */,
+				6FFB47C81524AFEE00798148 /* LearningChineseGameThreeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

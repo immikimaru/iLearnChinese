@@ -35,7 +35,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *answerField;
 
 - (IBAction)valideAnswer:(id)sender;
-- (BOOL)isChineseKeyboardActivated;
 
 - (void) loadDB;
 - (void) loadQuestion;

@@ -14,5 +14,6 @@
 @interface LearningChineseViewController : UIViewController
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+- (IBAction)game2Button:(id)sender;
 
 @end
