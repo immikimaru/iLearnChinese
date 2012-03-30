@@ -111,6 +111,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Background@2x.png"]]];
     [self checkDatabase];
 }
 

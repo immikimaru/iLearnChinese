@@ -25,12 +25,11 @@
 		6FF88EAE151C547300834B91 /* LearningChineseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF88EAD151C547300834B91 /* LearningChineseViewController.m */; };
 		6FF88EB6151C551800834B91 /* LearningChineseGameOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF88EB5151C551800834B91 /* LearningChineseGameOneViewController.m */; };
 		6FF88EB9151C552700834B91 /* LearningChineseGameTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF88EB8151C552700834B91 /* LearningChineseGameTwoViewController.m */; };
-		6FF88EBD151C578400834B91 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FF88EBC151C578400834B91 /* background.png */; };
 		6FFB47C81524AFEE00798148 /* LearningChineseGameThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FFB47C71524AFEE00798148 /* LearningChineseGameThreeViewController.m */; };
 		6FFF873215240CD70039B1BB /* LearningChineseWordDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FFF873115240CD70039B1BB /* LearningChineseWordDetailViewController.m */; };
-		9D0A246F151C6A0300AC7811 /* background1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D0A246E151C6A0300AC7811 /* background1.png */; };
 		9D13EAA5152465C000B4BB5B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D13EAA4152465C000B4BB5B /* Default@2x.png */; };
 		9D13EAA81524681800B4BB5B /* ilearnChinese_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D13EAA71524681800B4BB5B /* ilearnChinese_icon.png */; };
+		9DAE99931525A77B00F9DA98 /* Background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DAE99921525A77B00F9DA98 /* Background@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,15 +64,14 @@
 		6FF88EB5151C551800834B91 /* LearningChineseGameOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearningChineseGameOneViewController.m; sourceTree = "<group>"; };
 		6FF88EB7151C552700834B91 /* LearningChineseGameTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearningChineseGameTwoViewController.h; sourceTree = "<group>"; };
 		6FF88EB8151C552700834B91 /* LearningChineseGameTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearningChineseGameTwoViewController.m; sourceTree = "<group>"; };
-		6FF88EBC151C578400834B91 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		6FFB47C61524AFEE00798148 /* LearningChineseGameThreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearningChineseGameThreeViewController.h; sourceTree = "<group>"; };
 		6FFB47C71524AFEE00798148 /* LearningChineseGameThreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearningChineseGameThreeViewController.m; sourceTree = "<group>"; };
 		6FFB47C91524C78000798148 /* WordManager.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = WordManager.sqlite; sourceTree = "<group>"; };
 		6FFF873015240CD70039B1BB /* LearningChineseWordDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearningChineseWordDetailViewController.h; sourceTree = "<group>"; };
 		6FFF873115240CD70039B1BB /* LearningChineseWordDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearningChineseWordDetailViewController.m; sourceTree = "<group>"; };
-		9D0A246E151C6A0300AC7811 /* background1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background1.png; sourceTree = "<group>"; };
 		9D13EAA4152465C000B4BB5B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
 		9D13EAA71524681800B4BB5B /* ilearnChinese_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ilearnChinese_icon.png; path = ../ilearnChinese_icon.png; sourceTree = "<group>"; };
+		9DAE99921525A77B00F9DA98 /* Background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Background@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,8 +217,7 @@
 				9D13EAA71524681800B4BB5B /* ilearnChinese_icon.png */,
 				9D13EAA4152465C000B4BB5B /* Default@2x.png */,
 				6FFB47C91524C78000798148 /* WordManager.sqlite */,
-				6FF88EBC151C578400834B91 /* background.png */,
-				9D0A246E151C6A0300AC7811 /* background1.png */,
+				9DAE99921525A77B00F9DA98 /* Background@2x.png */,
 			);
 			name = Ressources;
 			sourceTree = "<group>";
@@ -278,10 +275,9 @@
 			files = (
 				6FF88EA2151C547300834B91 /* InfoPlist.strings in Resources */,
 				6FF88EAB151C547300834B91 /* MainStoryboard.storyboard in Resources */,
-				6FF88EBD151C578400834B91 /* background.png in Resources */,
-				9D0A246F151C6A0300AC7811 /* background1.png in Resources */,
 				9D13EAA5152465C000B4BB5B /* Default@2x.png in Resources */,
 				9D13EAA81524681800B4BB5B /* ilearnChinese_icon.png in Resources */,
+				9DAE99931525A77B00F9DA98 /* Background@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
