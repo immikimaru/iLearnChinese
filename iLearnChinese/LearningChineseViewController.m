@@ -11,6 +11,7 @@
 #import "LearningChineseHighScoreViewController.h"
 #import "LearningChineseGameOneViewController.h"
 #import "LearningChineseGameTwoViewController.h"
+#import "User.h"
 
 @interface LearningChineseViewController ()
 
@@ -109,11 +110,36 @@
     }
 }
 
+- (void)checkUser
+{
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"User" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    NSError *error;
+    NSArray *myDB = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    
+    if (![myDB count])
+    {
+        NSLog(@"LOADING DEFAULT USER");
+        
+        User *user = [NSEntityDescription insertNewObjectForEntityForName:@"User"
+                                                   inManagedObjectContext:self.managedObjectContext];
+        
+        [user setName:@"Default"];
+        [self.managedObjectContext save:nil];
+    }
+    else
+    {
+        NSLog(@"USER EXIST.");
+    }
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Background.png"]]];
     [self checkDatabase];
+    [self checkUser];
 }
 
 - (void)viewDidUnload

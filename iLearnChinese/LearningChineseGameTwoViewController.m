@@ -105,11 +105,6 @@
      NSError *error;
      myDB = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
      countDB = myDB.count;
-    for (Word *word in myDB)
-    {
-        NSLog(@"[JL DEBUG %s]\nE: %@\nC: %@", __func__, word.english, word.chinese);
-    }
-    NSLog(@"[JL DEBUG %s] LOAD DB : %i", __func__, countDB);
 }
 
 - (void)countDown

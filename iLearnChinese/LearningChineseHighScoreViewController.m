@@ -68,7 +68,7 @@
     }
     // Configure the cell...
     Score *score = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    NSString *scoreLabel = [NSString stringWithFormat:@"%@\t%@%% %@ %@", [score.score stringValue], [score.accuracy stringValue], score.game, score.user];
+    NSString *scoreLabel = [NSString stringWithFormat:@"%@\t%@%% %@ %@", [score.score stringValue], [score.accuracy stringValue], [score.game stringValue], score.user];
     cell.textLabel.text = scoreLabel;
     return cell;
 }

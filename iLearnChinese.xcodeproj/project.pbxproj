@@ -17,6 +17,18 @@
 		6FAFADC61525E8F100EA78F4 /* GameTwowrite.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FAFADC51525E8F100EA78F4 /* GameTwowrite.png */; };
 		6FAFADCE1525EC5800EA78F4 /* gameOneReco.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FAFADCD1525EC5800EA78F4 /* gameOneReco.png */; };
 		6FAFADD01525EE7B00EA78F4 /* gameThreeDrag.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FAFADCF1525EE7B00EA78F4 /* gameThreeDrag.png */; };
+		6FD35AED1525FB9F001BA536 /* gradientBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FD35AEC1525FB9F001BA536 /* gradientBackground.png */; };
+		6FD35AF01525FE59001BA536 /* bottomRow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FD35AEF1525FE59001BA536 /* bottomRow.png */; };
+		6FD35AF21525FE63001BA536 /* topAndBottomRow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FD35AF11525FE63001BA536 /* topAndBottomRow.png */; };
+		6FD35AF81526004A001BA536 /* bottomRowSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FD35AF71526004A001BA536 /* bottomRowSelected.png */; };
+		6FD35AFB15260050001BA536 /* middleRowSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FD35AFA15260050001BA536 /* middleRowSelected.png */; };
+		6FD35AFD15260055001BA536 /* middleRow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FD35AFC15260055001BA536 /* middleRow.png */; };
+		6FD35AFF1526005A001BA536 /* topRow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FD35AFE1526005A001BA536 /* topRow.png */; };
+		6FD35B011526005F001BA536 /* topRowSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FD35B001526005F001BA536 /* topRowSelected.png */; };
+		6FD35B0315260066001BA536 /* imageB.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FD35B0215260066001BA536 /* imageB.png */; };
+		6FD35B0515260070001BA536 /* topAndBottomRowSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FD35B0415260070001BA536 /* topAndBottomRowSelected.png */; };
+		6FD35B071526007F001BA536 /* indicator.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FD35B061526007F001BA536 /* indicator.png */; };
+		6FD35B0E152608CD001BA536 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FD35B0D152608CD001BA536 /* User.m */; };
 		6FDFAC661522E2800065E70F /* LearningChineseDatabaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FDFAC651522E2800065E70F /* LearningChineseDatabaseViewController.m */; };
 		6FDFAC6D1522EA770065E70F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FDFAC6C1522EA770065E70F /* CoreData.framework */; };
 		6FDFAC701522EFCA0065E70F /* LearningChineseAddWordToDatabaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FDFAC6F1522EFCA0065E70F /* LearningChineseAddWordToDatabaseViewController.m */; };
@@ -56,6 +68,19 @@
 		6FAFADC51525E8F100EA78F4 /* GameTwowrite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GameTwowrite.png; sourceTree = "<group>"; };
 		6FAFADCD1525EC5800EA78F4 /* gameOneReco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gameOneReco.png; sourceTree = "<group>"; };
 		6FAFADCF1525EE7B00EA78F4 /* gameThreeDrag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gameThreeDrag.png; sourceTree = "<group>"; };
+		6FD35AEC1525FB9F001BA536 /* gradientBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gradientBackground.png; sourceTree = "<group>"; };
+		6FD35AEF1525FE59001BA536 /* bottomRow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottomRow.png; sourceTree = "<group>"; };
+		6FD35AF11525FE63001BA536 /* topAndBottomRow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topAndBottomRow.png; sourceTree = "<group>"; };
+		6FD35AF71526004A001BA536 /* bottomRowSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottomRowSelected.png; sourceTree = "<group>"; };
+		6FD35AFA15260050001BA536 /* middleRowSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = middleRowSelected.png; sourceTree = "<group>"; };
+		6FD35AFC15260055001BA536 /* middleRow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = middleRow.png; sourceTree = "<group>"; };
+		6FD35AFE1526005A001BA536 /* topRow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topRow.png; sourceTree = "<group>"; };
+		6FD35B001526005F001BA536 /* topRowSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topRowSelected.png; sourceTree = "<group>"; };
+		6FD35B0215260066001BA536 /* imageB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageB.png; sourceTree = "<group>"; };
+		6FD35B0415260070001BA536 /* topAndBottomRowSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topAndBottomRowSelected.png; sourceTree = "<group>"; };
+		6FD35B061526007F001BA536 /* indicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = indicator.png; sourceTree = "<group>"; };
+		6FD35B0C152608CD001BA536 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		6FD35B0D152608CD001BA536 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		6FDFAC641522E2800065E70F /* LearningChineseDatabaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearningChineseDatabaseViewController.h; sourceTree = "<group>"; };
 		6FDFAC651522E2800065E70F /* LearningChineseDatabaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearningChineseDatabaseViewController.m; sourceTree = "<group>"; };
 		6FDFAC6C1522EA770065E70F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -141,6 +166,38 @@
 			name = HighScore;
 			sourceTree = "<group>";
 		};
+		6FD35AEA1525FA6B001BA536 /* MainViewImages */ = {
+			isa = PBXGroup;
+			children = (
+				9DAE99991525A95000F9DA98 /* Background.png */,
+				9DAE99921525A77B00F9DA98 /* Background@2x.png */,
+				6FAFADCF1525EE7B00EA78F4 /* gameThreeDrag.png */,
+				6FAFADC51525E8F100EA78F4 /* GameTwowrite.png */,
+				6FAFADCD1525EC5800EA78F4 /* gameOneReco.png */,
+				6FAFADC31525AF5500EA78F4 /* chineseBook.png */,
+				6FAFADC11525AED900EA78F4 /* trophy.png */,
+			);
+			name = MainViewImages;
+			sourceTree = "<group>";
+		};
+		6FD35AEE1525FBA5001BA536 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				6FD35B061526007F001BA536 /* indicator.png */,
+				6FD35B0415260070001BA536 /* topAndBottomRowSelected.png */,
+				6FD35B0215260066001BA536 /* imageB.png */,
+				6FD35B001526005F001BA536 /* topRowSelected.png */,
+				6FD35AFE1526005A001BA536 /* topRow.png */,
+				6FD35AFC15260055001BA536 /* middleRow.png */,
+				6FD35AFA15260050001BA536 /* middleRowSelected.png */,
+				6FD35AF71526004A001BA536 /* bottomRowSelected.png */,
+				6FD35AF11525FE63001BA536 /* topAndBottomRow.png */,
+				6FD35AEF1525FE59001BA536 /* bottomRow.png */,
+				6FD35AEC1525FB9F001BA536 /* gradientBackground.png */,
+			);
+			name = TableView;
+			sourceTree = "<group>";
+		};
 		6FDFAC711522EFD30065E70F /* DB */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +225,8 @@
 				6F9E408615237BEF00DACAD3 /* CoreDataTableViewController.h */,
 				6F9E408715237BEF00DACAD3 /* CoreDataTableViewController.m */,
 				6FDFACAA152303D20065E70F /* Model.xcdatamodeld */,
+				6FD35B0C152608CD001BA536 /* User.h */,
+				6FD35B0D152608CD001BA536 /* User.m */,
 				6FAFADB51525A95800EA78F4 /* Score.h */,
 				6FAFADB61525A95800EA78F4 /* Score.m */,
 				6FDFACAD152305A10065E70F /* Word.h */,
@@ -244,16 +303,11 @@
 		6FF88EBB151C567500834B91 /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
-				6FAFADCF1525EE7B00EA78F4 /* gameThreeDrag.png */,
-				6FAFADC51525E8F100EA78F4 /* GameTwowrite.png */,
-				6FAFADCD1525EC5800EA78F4 /* gameOneReco.png */,
-				6FAFADC31525AF5500EA78F4 /* chineseBook.png */,
-				6FAFADC11525AED900EA78F4 /* trophy.png */,
+				6FD35AEE1525FBA5001BA536 /* TableView */,
+				6FD35AEA1525FA6B001BA536 /* MainViewImages */,
 				9D13EAA71524681800B4BB5B /* ilearnChinese_icon.png */,
 				9D13EAA4152465C000B4BB5B /* Default@2x.png */,
 				6FFB47C91524C78000798148 /* WordManager.sqlite */,
-				9DAE99921525A77B00F9DA98 /* Background@2x.png */,
-				9DAE99991525A95000F9DA98 /* Background.png */,
 			);
 			name = Ressources;
 			sourceTree = "<group>";
@@ -320,6 +374,17 @@
 				6FAFADC61525E8F100EA78F4 /* GameTwowrite.png in Resources */,
 				6FAFADCE1525EC5800EA78F4 /* gameOneReco.png in Resources */,
 				6FAFADD01525EE7B00EA78F4 /* gameThreeDrag.png in Resources */,
+				6FD35AED1525FB9F001BA536 /* gradientBackground.png in Resources */,
+				6FD35AF01525FE59001BA536 /* bottomRow.png in Resources */,
+				6FD35AF21525FE63001BA536 /* topAndBottomRow.png in Resources */,
+				6FD35AF81526004A001BA536 /* bottomRowSelected.png in Resources */,
+				6FD35AFB15260050001BA536 /* middleRowSelected.png in Resources */,
+				6FD35AFD15260055001BA536 /* middleRow.png in Resources */,
+				6FD35AFF1526005A001BA536 /* topRow.png in Resources */,
+				6FD35B011526005F001BA536 /* topRowSelected.png in Resources */,
+				6FD35B0315260066001BA536 /* imageB.png in Resources */,
+				6FD35B0515260070001BA536 /* topAndBottomRowSelected.png in Resources */,
+				6FD35B071526007F001BA536 /* indicator.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +411,7 @@
 				24B05AEC152590D70085F649 /* LearningChineseLettersList.m in Sources */,
 				6FAFADB71525A95800EA78F4 /* Score.m in Sources */,
 				6FAFADC01525AE1500EA78F4 /* LearningChineseHighScoreViewController.m in Sources */,
+				6FD35B0E152608CD001BA536 /* User.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

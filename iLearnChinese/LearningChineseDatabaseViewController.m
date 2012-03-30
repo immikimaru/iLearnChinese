@@ -10,6 +10,7 @@
 #import "Word.h"
 
 @implementation LearningChineseDatabaseViewController
+@synthesize chineseLabel = _chineseLabel;
 @synthesize fetchedResultsController = __fetchedResultsController;
 @synthesize managedObjectContext = __managedObjectContext;
 @synthesize selectedWord = _selectedWord;
@@ -71,6 +72,8 @@
     // Configure the cell...
     Word *word = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = word.english;
+    //[cell.contentView addSubview:_chineseLabel];
+    //_chineseLabel.text = word.chinese; 
     /*
     _chineseLabel.text = word.chinese;
     [cell.contentView addSubview:_chineseLabel];
@@ -162,6 +165,7 @@
     [self setEnglishLabel:nil];
     [self setPinyinLabel:nil];
     */
+    [self setChineseLabel:nil];
     [super viewDidUnload];
 }
 @end
