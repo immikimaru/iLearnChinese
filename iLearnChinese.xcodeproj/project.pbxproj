@@ -309,7 +309,8 @@
 				6FDFACAF152305A10065E70F /* Word.m in Sources */,
 				6FFF873215240CD70039B1BB /* LearningChineseWordDetailViewController.m in Sources */,
 				6FFB47C81524AFEE00798148 /* LearningChineseGameThreeViewController.m in Sources */,
-				6FAFADAB1525992400EA78F4 /* Score.m in Sources */,
+				24B05AEB152590D70085F649 /* LearningChineseLetter.m in Sources */,
+				24B05AEC152590D70085F649 /* LearningChineseLettersList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

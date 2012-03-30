@@ -99,11 +99,7 @@
     {
         NSLog(@"LOADING DEFAULT DATABASE");
         //[fileManager copyItemAtPath:defaultStorePath toPath:storePath error:NULL];
-        
-        [self addWordToDBWithEnglish:@"test" chinese:@"test" pinyin:@"test"];
-        [self addWordToDBWithEnglish:@"test1" chinese:@"test1" pinyin:@"test1"];
-        [self addWordToDBWithEnglish:@"test2" chinese:@"test2" pinyin:@"test2"];
-        [self addWordToDBWithEnglish:@"test2" chinese:@"test2" pinyin:@"test2"];
+        [self loadDefaultDatabase];
     }
     else
     {
