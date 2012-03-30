@@ -68,8 +68,8 @@
     }
     // Configure the cell...
     Score *score = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    NSLog(@"JUST TO CHECK : %@", [score.score stringValue]);
-    cell.textLabel.text = [score.score stringValue];
+    NSString *scoreLabel = [NSString stringWithFormat:@"%@\t%@%% %@ %@", [score.score stringValue], [score.accuracy stringValue], score.game, score.user];
+    cell.textLabel.text = scoreLabel;
     return cell;
 }
 
@@ -78,11 +78,6 @@
 }
 
 - (void)viewDidUnload {
-    /*
-     [self setChineseLabel:nil];
-     [self setEnglishLabel:nil];
-     [self setPinyinLabel:nil];
-     */
     [super viewDidUnload];
 }
 @end

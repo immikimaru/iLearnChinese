@@ -14,6 +14,9 @@
 		6FAFADC01525AE1500EA78F4 /* LearningChineseHighScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAFADBF1525AE1500EA78F4 /* LearningChineseHighScoreViewController.m */; };
 		6FAFADC21525AED900EA78F4 /* trophy.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FAFADC11525AED900EA78F4 /* trophy.png */; };
 		6FAFADC41525AF5500EA78F4 /* chineseBook.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FAFADC31525AF5500EA78F4 /* chineseBook.png */; };
+		6FAFADC61525E8F100EA78F4 /* GameTwowrite.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FAFADC51525E8F100EA78F4 /* GameTwowrite.png */; };
+		6FAFADCE1525EC5800EA78F4 /* gameOneReco.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FAFADCD1525EC5800EA78F4 /* gameOneReco.png */; };
+		6FAFADD01525EE7B00EA78F4 /* gameThreeDrag.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FAFADCF1525EE7B00EA78F4 /* gameThreeDrag.png */; };
 		6FDFAC661522E2800065E70F /* LearningChineseDatabaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FDFAC651522E2800065E70F /* LearningChineseDatabaseViewController.m */; };
 		6FDFAC6D1522EA770065E70F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FDFAC6C1522EA770065E70F /* CoreData.framework */; };
 		6FDFAC701522EFCA0065E70F /* LearningChineseAddWordToDatabaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FDFAC6F1522EFCA0065E70F /* LearningChineseAddWordToDatabaseViewController.m */; };
@@ -50,6 +53,9 @@
 		6FAFADBF1525AE1500EA78F4 /* LearningChineseHighScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearningChineseHighScoreViewController.m; sourceTree = "<group>"; };
 		6FAFADC11525AED900EA78F4 /* trophy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trophy.png; sourceTree = "<group>"; };
 		6FAFADC31525AF5500EA78F4 /* chineseBook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chineseBook.png; sourceTree = "<group>"; };
+		6FAFADC51525E8F100EA78F4 /* GameTwowrite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GameTwowrite.png; sourceTree = "<group>"; };
+		6FAFADCD1525EC5800EA78F4 /* gameOneReco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gameOneReco.png; sourceTree = "<group>"; };
+		6FAFADCF1525EE7B00EA78F4 /* gameThreeDrag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gameThreeDrag.png; sourceTree = "<group>"; };
 		6FDFAC641522E2800065E70F /* LearningChineseDatabaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearningChineseDatabaseViewController.h; sourceTree = "<group>"; };
 		6FDFAC651522E2800065E70F /* LearningChineseDatabaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearningChineseDatabaseViewController.m; sourceTree = "<group>"; };
 		6FDFAC6C1522EA770065E70F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -238,6 +244,9 @@
 		6FF88EBB151C567500834B91 /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
+				6FAFADCF1525EE7B00EA78F4 /* gameThreeDrag.png */,
+				6FAFADC51525E8F100EA78F4 /* GameTwowrite.png */,
+				6FAFADCD1525EC5800EA78F4 /* gameOneReco.png */,
 				6FAFADC31525AF5500EA78F4 /* chineseBook.png */,
 				6FAFADC11525AED900EA78F4 /* trophy.png */,
 				9D13EAA71524681800B4BB5B /* ilearnChinese_icon.png */,
@@ -308,6 +317,9 @@
 				9DAE999A1525A95000F9DA98 /* Background.png in Resources */,
 				6FAFADC21525AED900EA78F4 /* trophy.png in Resources */,
 				6FAFADC41525AF5500EA78F4 /* chineseBook.png in Resources */,
+				6FAFADC61525E8F100EA78F4 /* GameTwowrite.png in Resources */,
+				6FAFADCE1525EC5800EA78F4 /* gameOneReco.png in Resources */,
+				6FAFADD01525EE7B00EA78F4 /* gameThreeDrag.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
