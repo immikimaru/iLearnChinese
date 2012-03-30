@@ -51,7 +51,7 @@
 {
     // Reset value for a new game
     actualScore = 0;
-    time = 60;
+    time = 6;
     nbQuestions = 0;
     goodAnswer = 0;
     nbQuestion.text = [[NSString alloc] initWithFormat:@"Question %i :", nbQuestions];
@@ -138,11 +138,25 @@
     countDB = myDB.count;
 
     // this is how you save the scores:
-    Score *score = [NSEntityDescription insertNewObjectForEntityForName:@"Score"
-                                               inManagedObjectContext:self.managedObjectContext];
-    [score setScore:[NSNumber numberWithInt:999]];
-    [self.managedObjectContext save:nil];
+
      
+}
+
+- (void)saveScore
+{
+    Score *score = [NSEntityDescription insertNewObjectForEntityForName:@"Score"
+                                          inManagedObjectContext:self.managedObjectContext];
+    [score setScore:[NSNumber numberWithInt:actualScore]];
+    [score setAnsweredQuestion:[NSNumber numberWithInt:goodAnswer]];
+    [score setAskedQuestion:[NSNumber numberWithInt:nbQuestions - 1]];
+    if (nbQuestions == 1)
+        [score setAccuracy:[NSNumber numberWithInt:0]];
+    else
+        [score setAccuracy:[NSNumber numberWithInt:(100 * goodAnswer / (nbQuestions - 1))]];
+    [score setUser:@"You"];
+    [score setGame:[NSNumber numberWithInt:1]];
+    [score setDate:[NSDate date]];
+    [self.managedObjectContext save:nil];
 }
 
 - (void)countDown
@@ -165,6 +179,7 @@
             else
                 percentage = (100 * goodAnswer / (nbQuestions - 1));
             question.text = [[NSString alloc] initWithFormat:@"Time up !\nYou scored %i.\n%i/%i (%i%%)", actualScore, goodAnswer, nbQuestions - 1, percentage];
+            [self saveScore];
             [answerOne setHidden:YES];
             [answerTwo setHidden:YES];
             [answerThree setHidden:YES];

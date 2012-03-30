@@ -9,6 +9,7 @@
 #import <CoreData/CoreData.h>
 #import "LearningChineseGameTwoViewController.h"
 #import "Word.h"
+#import "Score.h"
 
 @interface LearningChineseGameTwoViewController ()
 
@@ -70,7 +71,7 @@
 {
     // Reset value for a new game
     actualScore = 0;
-    time = 300;
+    time = 30;
     nbQuestions = 0;
     goodAnswer = 0;
     nbQuestion.text = [[NSString alloc] initWithFormat:@"Question %i :", nbQuestions];
@@ -112,6 +113,23 @@
     NSLog(@"[JL DEBUG %s] LOAD DB : %i", __func__, countDB);
 }
 
+- (void)saveScore
+{
+    Score *score = [NSEntityDescription insertNewObjectForEntityForName:@"Score"
+                                                 inManagedObjectContext:self.managedObjectContext];
+    [score setScore:[NSNumber numberWithInt:actualScore]];
+    [score setAnsweredQuestion:[NSNumber numberWithInt:goodAnswer]];
+    [score setAskedQuestion:[NSNumber numberWithInt:nbQuestions - 1]];
+    if (nbQuestions == 1)
+        [score setAccuracy:[NSNumber numberWithInt:0]];
+    else
+        [score setAccuracy:[NSNumber numberWithInt:(100 * goodAnswer / (nbQuestions - 1))]];
+    [score setUser:@"You"];
+    [score setGame:[NSNumber numberWithInt:2]];
+    [score setDate:[NSDate date]];
+    [self.managedObjectContext save:nil];
+}
+
 - (void)countDown
 {
     // if the game is runningm isResting == NO
@@ -132,6 +150,7 @@
             else
                 percentage = (100 * goodAnswer / (nbQuestions - 1));
             question.text = [[NSString alloc] initWithFormat:@"Time up !\nYou scored %i.\n%i/%i (%i%%)", actualScore, goodAnswer, nbQuestions - 1, percentage];
+            [self saveScore];
         }
     }
     else 

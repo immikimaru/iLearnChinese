@@ -18,13 +18,11 @@
     NSInteger right;
     
     // Score
-    //IBOutlet UILabel *myScore;
     NSInteger actualScore;
     NSInteger nbQuestions;
     NSInteger goodAnswer;
     
     // Timer
-    //IBOutlet UILabel *timeLeft;
     NSInteger time;
     NSInteger restTime;
     BOOL isResting;
@@ -57,6 +55,7 @@
 
 
 - (void) checkAnswer:(NSInteger)answer;
+- (void) saveScore;
 - (void) loadDB;
 - (void) loadQuestion;
 - (void) updateScore;
