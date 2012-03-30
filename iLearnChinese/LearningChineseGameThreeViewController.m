@@ -608,23 +608,44 @@ NSUInteger const TOP_LINE_THREE = 238;
         [self.button21 setHidden:NO];
 }
 
-- (IBAction)checkAnswer:(id)sender
+- (void)nextQuestion
 {
+    int numberOfPart = (arc4random() % 3) + 1;
+    [self prepareForNextQuestion:numberOfPart];
+    
+    gamePoints.text = [NSString stringWithFormat:@"%d", score]; 
+}
+
+-(IBAction)checkAnswer:(id)sender
+{
+    [self nextQuestion];
 }
 
 - (IBAction)skipAnswer:(id)sender
 {
+    self.score -= 2;
+    [self nextQuestion];
 }
 
 -(void)prepareForNextQuestion:(NSUInteger)partsNumber
 {
+    UIFont *textFont;
     self.partTwoEnable = NO;
     self.partThreeEnable = NO;
     
     if (partsNumber > 1)
+    {
         self.partTwoEnable = YES;
+        textFont = [UIFont fontWithName:@"System" size:56];
+    }
     if (partsNumber > 2)
+    {
         self.partThreeEnable = YES;
+        textFont = [UIFont fontWithName:@"System" size:40];
+    }
+    else
+        textFont = [UIFont fontWithName:@"System" size:65];
+    chineseCharacter.font = textFont;
     
     [self resetSelectedChoice:nil];
 }
