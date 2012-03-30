@@ -16,10 +16,48 @@
 @implementation LearningChineseViewController
 @synthesize managedObjectContext = _managedObjectContext;
 
+
+- (void)addWordToDBWithEnglish:(NSString *)english 
+                    chinese:(NSString *)chinese 
+                     pinyin:(NSString *)pinyin
+{
+    Word *word = [NSEntityDescription insertNewObjectForEntityForName:@"Word"
+                                               inManagedObjectContext:self.managedObjectContext];
+    NSNumber *no = 0;
+    [word setEnglish:english];
+    [word setPinyin:chinese];
+    [word setChinese:pinyin];
+    [word setAddByUser:no];
+    [self.managedObjectContext save:nil];
+}
+
+- (void)checkDatabase
+{
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Word" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    NSError *error;
+    NSArray *myDB = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    
+    if (![myDB count])
+    {
+        NSLog(@"LOADING DEFAULT DATABASE");
+        //[fileManager copyItemAtPath:defaultStorePath toPath:storePath error:NULL];
+        
+        [self addWordToDBWithEnglish:@"test" chinese:@"test" pinyin:@"test"];
+        [self addWordToDBWithEnglish:@"test1" chinese:@"test1" pinyin:@"test1"];
+        [self addWordToDBWithEnglish:@"test2" chinese:@"test2" pinyin:@"test2"];
+    }
+    else
+    {
+        NSLog(@"The database already exist");
+    }
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Setting up the databse
+    [self checkDatabase];
 }
 
 - (void)viewDidUnload
