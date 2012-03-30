@@ -10,7 +10,6 @@
 		24B05AEB152590D70085F649 /* LearningChineseLetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B05AE8152590D70085F649 /* LearningChineseLetter.m */; };
 		24B05AEC152590D70085F649 /* LearningChineseLettersList.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B05AEA152590D70085F649 /* LearningChineseLettersList.m */; };
 		6F9E408D15237F4200DACAD3 /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9E408715237BEF00DACAD3 /* CoreDataTableViewController.m */; };
-		6FAFADAB1525992400EA78F4 /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAFADAA1525992400EA78F4 /* Score.m */; };
 		6FDFAC661522E2800065E70F /* LearningChineseDatabaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FDFAC651522E2800065E70F /* LearningChineseDatabaseViewController.m */; };
 		6FDFAC6D1522EA770065E70F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FDFAC6C1522EA770065E70F /* CoreData.framework */; };
 		6FDFAC701522EFCA0065E70F /* LearningChineseAddWordToDatabaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FDFAC6F1522EFCA0065E70F /* LearningChineseAddWordToDatabaseViewController.m */; };
@@ -31,6 +30,7 @@
 		9D13EAA5152465C000B4BB5B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D13EAA4152465C000B4BB5B /* Default@2x.png */; };
 		9D13EAA81524681800B4BB5B /* ilearnChinese_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D13EAA71524681800B4BB5B /* ilearnChinese_icon.png */; };
 		9DAE99931525A77B00F9DA98 /* Background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DAE99921525A77B00F9DA98 /* Background@2x.png */; };
+		9DAE999A1525A95000F9DA98 /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DAE99991525A95000F9DA98 /* Background.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +75,7 @@
 		9D13EAA4152465C000B4BB5B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
 		9D13EAA71524681800B4BB5B /* ilearnChinese_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ilearnChinese_icon.png; path = ../ilearnChinese_icon.png; sourceTree = "<group>"; };
 		9DAE99921525A77B00F9DA98 /* Background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Background@2x.png"; sourceTree = "<group>"; };
+		9DAE99991525A95000F9DA98 /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +224,7 @@
 				9D13EAA4152465C000B4BB5B /* Default@2x.png */,
 				6FFB47C91524C78000798148 /* WordManager.sqlite */,
 				9DAE99921525A77B00F9DA98 /* Background@2x.png */,
+				9DAE99991525A95000F9DA98 /* Background.png */,
 			);
 			name = Ressources;
 			sourceTree = "<group>";
@@ -283,6 +285,7 @@
 				9D13EAA5152465C000B4BB5B /* Default@2x.png in Resources */,
 				9D13EAA81524681800B4BB5B /* ilearnChinese_icon.png in Resources */,
 				9DAE99931525A77B00F9DA98 /* Background@2x.png in Resources */,
+				9DAE999A1525A95000F9DA98 /* Background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
