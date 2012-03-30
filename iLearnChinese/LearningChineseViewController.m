@@ -173,6 +173,11 @@
         LearningChineseGameTwoViewController *words = segue.destinationViewController;
         words.managedObjectContext = self.managedObjectContext;
     }
+    else if ([segue.identifier isEqualToString:@"PushGameThree"])
+    {
+        LearningChineseGameTwoViewController *words = segue.destinationViewController;
+        words.managedObjectContext = self.managedObjectContext;
+    }
 }
 - (IBAction)game2Button:(id)sender
 {

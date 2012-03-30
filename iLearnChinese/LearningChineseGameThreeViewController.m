@@ -6,9 +6,11 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
+#import <CoreData/CoreData.h>
 #import "LearningChineseGameThreeViewController.h"
 #import "LearningChineseLettersList.h"
 #import "LearningChineseLetter.h"
+#import "Word.h"
 
 @interface LearningChineseGameThreeViewController ()
 
@@ -73,10 +75,13 @@ NSUInteger const TOP_LINE_THREE = 238;
 @synthesize p4;
 @synthesize chineseCharacter;
 @synthesize gamePoints;
+@synthesize gameTime;
 @synthesize tablePronunciation;
 @synthesize partTwoEnable;
 @synthesize partThreeEnable;
 @synthesize score;
+@synthesize displayZone;
+@synthesize managedObjectContext = _managedObjectContext;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -89,9 +94,6 @@ NSUInteger const TOP_LINE_THREE = 238;
 
 - (void)viewDidLoad
 {
-    score = 0;
-    gamePoints.text = [NSString stringWithFormat:@"%d", score]; 
-    
     self.dataController = [[LearningChineseLettersList alloc] init]; 
     
     // Initialization buttonMovableTable
@@ -132,8 +134,8 @@ NSUInteger const TOP_LINE_THREE = 238;
     
     
     // Initialization pronunciation table
-    NSArray *a = [NSArray arrayWithObjects :@"ā",@"á",@"ǎ",@"è", nil];
-    NSArray *e = [NSArray arrayWithObjects :@"ē",@"é",@"ě",@"à", nil];
+    NSArray *a = [NSArray arrayWithObjects :@"ā",@"á",@"ǎ",@"à", nil];
+    NSArray *e = [NSArray arrayWithObjects :@"ē",@"é",@"ě",@"è", nil];
     NSArray *i = [NSArray arrayWithObjects :@"ī",@"í",@"ǐ",@"ì", nil];
     NSArray *o = [NSArray arrayWithObjects :@"ō",@"ó",@"ǒ",@"ò", nil];
     NSArray *u = [NSArray arrayWithObjects :@"ū",@"ú",@"ǔ",@"ù", nil];
@@ -142,8 +144,12 @@ NSUInteger const TOP_LINE_THREE = 238;
     
     tablePronunciation = tmpTablePronunciation;
     
+    //Load data
+    [self loadDB];
+    
     // Init buttons
-    [self prepareForNextQuestion:3];
+    //    [self prepareForNextQuestion:1];
+    [self resetGame];
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
@@ -202,6 +208,8 @@ NSUInteger const TOP_LINE_THREE = 238;
     [self setP3:nil];
     [self setP4:nil];
     [self setGamePoints:nil];
+    [self setGameTime:nil];
+    [self setDisplayZone:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -441,7 +449,7 @@ NSUInteger const TOP_LINE_THREE = 238;
         [self.button25 setHidden:NO];
     else if (currentButton == button25)
         [self.button26 setHidden:NO];
-    [currentButton setTitle:value forState:nil];
+    [currentButton setTitle:value forState:UIControlStateNormal];
 }
 
 -(BOOL)checkPronunciationAlreadyAssign:(UIButton*)currentButton tab:(NSArray *)tab
@@ -506,13 +514,11 @@ NSUInteger const TOP_LINE_THREE = 238;
         // Old information about the button
         LearningChineseLetter *currentLetter= [[self dataController] getLetter:currentButton.titleLabel.text];
         CGPoint oldCenter = currentLetter.initialCenter;
-        NSLog(@"LETTER : %f - %f", currentLetter.initialCenter.x, currentLetter.initialCenter.y);
         
         // VELOCITY EFFECT
         CGPoint velocity = [recognizer velocityInView:self.view];
         CGFloat magnitude = sqrtf((velocity.x * velocity.x) + (velocity.y * velocity.y));
         CGFloat slideMult = magnitude / 200;
-        NSLog(@"magnitude: %f, slideMult: %f", magnitude, slideMult);
         
         float slideFactor = 0.1 * slideMult; // Increase for more of a slide
         CGPoint finalPoint = CGPointMake(recognizer.view.center.x + (velocity.x * slideFactor), 
@@ -561,6 +567,11 @@ NSUInteger const TOP_LINE_THREE = 238;
 
 - (IBAction)resetSelectedChoice:(id)sender
 {
+    if (isResting == YES)
+    {
+        return ;
+    }
+    [self.button1 setHidden:NO];
     [self.button2 setHidden:YES];
     [self.button3 setHidden:YES];
     [self.button4 setHidden:YES];
@@ -608,46 +619,267 @@ NSUInteger const TOP_LINE_THREE = 238;
         [self.button21 setHidden:NO];
 }
 
-- (void)nextQuestion
-{
-    int numberOfPart = (arc4random() % 3) + 1;
-    [self prepareForNextQuestion:numberOfPart];
-    
-    gamePoints.text = [NSString stringWithFormat:@"%d", score]; 
-}
-
 -(IBAction)checkAnswer:(id)sender
 {
-    [self nextQuestion];
+    if (isResting == YES)
+    {
+        [self skipCorrection];
+        return ;
+    }
+    NSString *word = nil;
+    NSString *word2 = nil;
+    NSString *word3 = nil;
+    
+    word = nil;
+    if (button1.titleLabel.text.length)
+        word = [button1.titleLabel.text copy];
+    if (button2.titleLabel.text.length)
+        word = [[NSString alloc] initWithFormat:@"%@%@", word, button2.titleLabel.text];
+    if (button3.titleLabel.text.length)
+        word = [[NSString alloc] initWithFormat:@"%@%@", word, button3.titleLabel.text];
+    if (button4.titleLabel.text.length)
+        word = [[NSString alloc] initWithFormat:@"%@%@", word, button4.titleLabel.text];
+    if (button5.titleLabel.text.length)
+        word = [[NSString alloc] initWithFormat:@"%@%@", word, button5.titleLabel.text];
+    if (button6.titleLabel.text.length)
+        word = [[NSString alloc] initWithFormat:@"%@%@", word, button6.titleLabel.text];
+    if (partTwoEnable == YES)
+    {
+        if (button11.titleLabel.text.length)
+            word2 = [button11.titleLabel.text copy];
+        if (button12.titleLabel.text.length)
+            word2 = [[NSString alloc] initWithFormat:@"%@%@", word2, button12.titleLabel.text];
+        if (button13.titleLabel.text.length)
+            word2 = [[NSString alloc] initWithFormat:@"%@%@", word2, button13.titleLabel.text];
+        if (button14.titleLabel.text.length)
+            word2 = [[NSString alloc] initWithFormat:@"%@%@", word2, button14.titleLabel.text];
+        if (button15.titleLabel.text.length)
+            word2 = [[NSString alloc] initWithFormat:@"%@%@", word2, button15.titleLabel.text];
+        if (button16.titleLabel.text.length)
+            word2 = [[NSString alloc] initWithFormat:@"%@%@", word2, button16.titleLabel.text];
+        if (word2)
+            word = [[NSString alloc] initWithFormat:@"%@%@", word, word2];
+        if (partThreeEnable == YES)
+        {
+            if (button21.titleLabel.text.length)
+                word3 = [button21.titleLabel.text copy];
+            if (button22.titleLabel.text.length)
+                word3 = [[NSString alloc] initWithFormat:@"%@%@", word3, button22.titleLabel.text];
+            if (button23.titleLabel.text.length)
+                word3 = [[NSString alloc] initWithFormat:@"%@%@", word3, button23.titleLabel.text];
+            if (button24.titleLabel.text.length)
+                word3 = [[NSString alloc] initWithFormat:@"%@%@", word3, button24.titleLabel.text];
+            if (button25.titleLabel.text.length)
+                word3 = [[NSString alloc] initWithFormat:@"%@%@", word3, button25.titleLabel.text];
+            if (button26.titleLabel.text.length)
+                word3 = [[NSString alloc] initWithFormat:@"%@%@", word3, button26.titleLabel.text];
+            if (word3)
+                word = [[NSString alloc] initWithFormat:@"%@%@", word, word3];
+        }
+    }
+    
+    restTime = 3;
+    isResting = YES;
+    
+    NSString *correctAnswer = [[NSString alloc] initWithFormat:[[myDB objectAtIndex:indexQuestion] valueForKey:@"pinyin"]];
+    if ([word isEqualToString:correctAnswer])
+    {
+        restTime = 3;
+        if (partThreeEnable)
+            self.score += 15;
+        else if (partTwoEnable)
+            self.score += 10;
+        else
+            self.score += 5;
+        displayZone.text = [[NSString alloc] initWithFormat:@"很好！You scored.\n\n%@\n%@", chineseCharacter.text, correctAnswer];
+    }
+    else
+    {
+        restTime = 5;
+        if ([word length])
+        {
+            displayZone.text = [[NSString alloc] initWithFormat:@"That's wrong, too bad...\n\n%@\n%@\n\nYou write: %@", chineseCharacter.text, correctAnswer, word];
+        }
+        else
+        {
+            displayZone.text = [[NSString alloc] initWithFormat:@"You should try!! :(\n\n%@\n%@", chineseCharacter.text, correctAnswer];
+        }
+        if (partThreeEnable)
+            self.score -= 1;
+        else if (partTwoEnable)
+            self.score -= 2;
+        else
+            self.score -= 3;
+    }
+    gamePoints.text = [NSString stringWithFormat:@"%d", score];
+    [self cleanForResult];
+}
+
+-(void)skipCorrection
+{
+    restTime = 0;
+    isResting = NO;
+    [self.p1 setHidden:NO];
+    [self.p2 setHidden:NO];
+    [self.p3 setHidden:NO];
+    [self.p4 setHidden:NO];
+    [self.displayZone setHidden:YES];
+    [self.p1 setHidden:NO];
+    [self.p2 setHidden:NO];
+    [self.p3 setHidden:NO];
+    [self.p4 setHidden:NO];
+    // Rest time is over
+    isResting = NO;
+    [timer invalidate];
+    // If time is > 0, game continues with another question
+    if (time > 0)
+        [self loadQuestion];
+    else
+        [self resetGame];
 }
 
 - (IBAction)skipAnswer:(id)sender
 {
-    self.score -= 2;
-    [self nextQuestion];
+    if (isResting == YES)
+    {
+        [self skipCorrection];
+        return ;
+    }
+    self.score -= 5;
+    restTime = 5;
+    isResting = YES;
+    NSString *correctAnswer = [[NSString alloc] initWithFormat:[[myDB objectAtIndex:indexQuestion] valueForKey:@"pinyin"]];
+    displayZone.text = [[NSString alloc] initWithFormat:@"You should try!! :(\n\n%@\n%@", chineseCharacter.text, correctAnswer];
+    gamePoints.text = [NSString stringWithFormat:@"%d", score];
+    [self cleanForResult];
 }
 
 -(void)prepareForNextQuestion:(NSUInteger)partsNumber
 {
-    UIFont *textFont;
     self.partTwoEnable = NO;
     self.partThreeEnable = NO;
     
     if (partsNumber > 1)
-    {
         self.partTwoEnable = YES;
-        textFont = [UIFont fontWithName:@"System" size:56];
-    }
     if (partsNumber > 2)
-    {
         self.partThreeEnable = YES;
-        textFont = [UIFont fontWithName:@"System" size:40];
-    }
-    else
-        textFont = [UIFont fontWithName:@"System" size:65];
-    chineseCharacter.font = textFont;
     
     [self resetSelectedChoice:nil];
+}
+
+- (void) loadDB
+{
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Word" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    NSError *error;
+    myDB = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    countDB = myDB.count;
+    for (Word *word in myDB)
+    {
+        // no more actions
+    }
+}
+
+- (void)cleanForResult
+{
+    [self resetSelectedChoice:nil];
+    [self.button1 setHidden:YES];
+    [self.button11 setHidden:YES];
+    [self.button21 setHidden:YES];
+    [self.displayZone setHidden:NO];
+    [self.p1 setHidden:YES];
+    [self.p2 setHidden:YES];
+    [self.p3 setHidden:YES];
+    [self.p4 setHidden:YES];
+}
+
+- (void)countDown
+{
+    // if the game is runningm isResting == NO
+    if (!isResting)
+    {
+        [self.displayZone setHidden:YES];
+        // if time is left, game continues
+        time--;
+        gameTime.text = [[NSString alloc] initWithFormat:@"%i", time];
+        if (time == 0)
+        {
+            [self cleanForResult];
+            // time is over,
+            isResting = YES;
+            // set rest time
+            restTime = 5;
+            NSInteger percentage;
+            if (nbQuestions == 1)
+                percentage = 0;
+            else
+                percentage = (100 * goodAnswer / (nbQuestions - 1));
+            displayZone.text = [[NSString alloc] initWithFormat:@"Time up !\nYou scored %i.\n%i/%i (%i%%)", score, goodAnswer, nbQuestions - 1, percentage];
+        }
+    }
+    else 
+    {
+        [self cleanForResult];
+        if (restTime > 0)
+        {
+            restTime--;
+        }
+        else 
+        {
+            // Rest time is over
+            isResting = NO;
+            [timer invalidate];
+            // If time is > 0, game continues with another question
+            if (time > 0)
+                [self loadQuestion];
+            else
+                [self resetGame];
+        }
+    }
+}
+
+- (void) resetGame
+{
+    [self.displayZone setHidden:YES];
+    // TODO: IMPLEMENTATION
+    time = 300;
+    gameTime.text = [[NSString alloc] initWithFormat:@"%i", time];
+    goodAnswer = 0;
+    score = 0;
+    gamePoints.text = [NSString stringWithFormat:@"%d", score];
+    isResting = NO;
+    [self.p1 setHidden:NO];
+    [self.p2 setHidden:NO];
+    [self.p3 setHidden:NO];
+    [self.p4 setHidden:NO];
+    [self.displayZone setHidden:YES];
+    [self loadQuestion];
+}
+
+- (void) loadQuestion
+{
+    [self.displayZone setHidden:YES];
+    [self.p1 setHidden:NO];
+    [self.p2 setHidden:NO];
+    [self.p3 setHidden:NO];
+    [self.p4 setHidden:NO];
+    // Save the right answer & ask the question
+    indexQuestion = arc4random() % countDB;
+    int lenght = 0;
+    NSString *word = nil;
+    while (lenght > 3 || lenght < 1)
+    {
+        word = [[NSString alloc] initWithFormat:[[myDB objectAtIndex:indexQuestion] valueForKey:@"chinese"]];
+        lenght = word.length;
+    }
+    nbQuestions++;
+    chineseCharacter.text = word;
+    
+    [self prepareForNextQuestion:lenght];
+    
+    // Launch timer
+    timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(countDown) userInfo:nil repeats:YES];
 }
 
 @end
