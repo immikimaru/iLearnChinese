@@ -11,8 +11,24 @@
 #import "LearningChineseLetter.h"
 
 @interface LearningChineseGameThreeViewController : UIViewController
+{
+    NSInteger nbQuestions;
+    NSInteger goodAnswer;
+    NSInteger time;
+    NSInteger restTime;
+    BOOL isResting;
+    NSTimer *timer;
+    
+    NSInteger indexQuestion;
+    
+    NSArray *myDB;
+    NSInteger countDB;
+}
 
 @property (strong, nonatomic) LearningChineseLettersList *dataController;
+
+// use for the DB
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 extern NSUInteger const WIDTH_LETTER;
 extern NSUInteger const WIDTH_BUTTON;
@@ -75,11 +91,13 @@ extern NSUInteger const TOP_LINE_THREE;
 
 @property (weak, nonatomic) IBOutlet UILabel *chineseCharacter;
 @property (weak, nonatomic) IBOutlet UILabel *gamePoints;
+@property (weak, nonatomic) IBOutlet UILabel *gameTime;
 
 @property (strong, nonatomic) NSArray *tablePronunciation;
 @property (readwrite, nonatomic) BOOL partTwoEnable;
 @property (readwrite, nonatomic) BOOL partThreeEnable;
 @property (readwrite, nonatomic) NSUInteger score;
+@property (weak, nonatomic) IBOutlet UILabel *displayZone;
 
 - (IBAction)handlePan:(UIPanGestureRecognizer *)recognizer;
 - (IBAction)resetSelectedChoice:(id)sender;
