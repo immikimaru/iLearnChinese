@@ -17,5 +17,6 @@
 @dynamic accuracy;
 @dynamic askedQuestion;
 @dynamic answeredQuestion;
+@dynamic date;
 
 @end

@@ -21,6 +21,55 @@
             </objects>
             <point key="canvasLocation" x="-97" y="64"/>
         </scene>
+        <!--View Controller - Item 2-->
+        <scene sceneID="jvj-Vc-on0">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sOW-Fh-bUL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="mT2-DV-IOE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="baw-yd-wfL">
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="V7F-SC-ZDt"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="292" y="1213"/>
+        </scene>
+        <!--View Controller - Item 1-->
+        <scene sceneID="6j5-R5-ZJk">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="snk-Jn-0V5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="ReZ-jm-0hd" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v1V-BQ-1pp">
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="ROP-E9-UF2"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="292" y="649"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="1Mq-eN-6tB">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O50-r1-kHd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tabBarController definesPresentationContext="YES" id="kV9-Fv-DXf" sceneMemberID="viewController">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="pZr-d1-8SK">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ReZ-jm-0hd" kind="relationship" relationship="viewControllers" id="OZh-Xz-LDM"/>
+                        <segue destination="mT2-DV-IOE" kind="relationship" relationship="viewControllers" id="Emt-i5-sQU"/>
+                    </connections>
+                </tabBarController>
+            </objects>
+            <point key="canvasLocation" x="-242" y="931"/>
+        </scene>
         <!--Learning Chinese Game One View Controller-->
         <scene sceneID="Wz7-sy-9db">
             <objects>
@@ -1700,6 +1749,7 @@
                 <relationship kind="outlet" name="chineseTextField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="englishTextField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="pinyinTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="saveButton" candidateClass="UIBarButtonItem"/>
             </relationships>
         </class>
     </classes>

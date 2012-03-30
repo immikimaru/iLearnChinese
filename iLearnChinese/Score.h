@@ -18,5 +18,6 @@
 @property (nonatomic, retain) NSNumber * accuracy;
 @property (nonatomic, retain) NSNumber * askedQuestion;
 @property (nonatomic, retain) NSNumber * answeredQuestion;
+@property (nonatomic, retain) NSDate * date;
 
 @end
