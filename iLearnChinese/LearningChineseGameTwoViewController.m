@@ -155,7 +155,8 @@
 }
 
 - (BOOL)answerFieldShouldReturn:(UITextField *)theTextField {
-    if (theTextField == self.answerField) {
+    if (theTextField == self.answerField)
+    {
         [theTextField resignFirstResponder];
     }
     return YES;
