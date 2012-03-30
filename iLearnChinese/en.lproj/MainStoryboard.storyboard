@@ -1618,7 +1618,7 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="782" y="-1000"/>
+            <point key="canvasLocation" x="791" y="-1031"/>
         </scene>
         <!--Learning Chinese View Controller - iLearnChinese-->
         <scene sceneID="V28-9U-8D6">
