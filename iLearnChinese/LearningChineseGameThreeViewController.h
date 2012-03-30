@@ -14,6 +14,12 @@
 
 @property (strong, nonatomic) LearningChineseLettersList *dataController;
 
+extern NSUInteger const WIDTH_LETTER;
+extern NSUInteger const WIDTH_BUTTON;
+
+extern NSUInteger const TOP_LINE_TWO;
+extern NSUInteger const TOP_LINE_THREE;
+
 @property (weak, nonatomic) IBOutlet UIButton *buttonA;
 @property (weak, nonatomic) IBOutlet UIButton *buttonE;
 @property (weak, nonatomic) IBOutlet UIButton *buttonI;

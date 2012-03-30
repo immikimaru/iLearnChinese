@@ -15,6 +15,12 @@
 @end
 
 @implementation LearningChineseGameThreeViewController
+
+NSUInteger const WIDTH_LETTER = 30;
+NSUInteger const WIDTH_BUTTON = 32;
+NSUInteger const TOP_LINE_TWO = 198;
+NSUInteger const TOP_LINE_THREE = 238;
+
 @synthesize dataController = _dataController;
 @synthesize buttonA;
 @synthesize buttonE;
@@ -209,15 +215,15 @@
 
 - (BOOL)doesTheCoordinatesMatches:(CGPoint)buttonCenter letterCenter:(CGPoint)letterCenter leftButton:(CGPoint)leftButtonCenter
 {
-    float xMinB = buttonCenter.x - (37 / 2);
-    float xMaxB = buttonCenter.x + (37 / 2);
-    float yMinB = buttonCenter.y - (37 / 2);
-    float yMaxB = buttonCenter.y + (37 / 2);
+    float xMinB = buttonCenter.x - (WIDTH_BUTTON / 2);
+    float xMaxB = buttonCenter.x + (WIDTH_BUTTON / 2);
+    float yMinB = buttonCenter.y - (WIDTH_BUTTON / 2);
+    float yMaxB = buttonCenter.y + (WIDTH_BUTTON / 2);
     
-    float xMinL = letterCenter.x - (35 / 2);
-    float xMaxL = letterCenter.x + (35 / 2);
-    float yMinL = letterCenter.y - (35 / 2);
-    float yMaxL = letterCenter.y + (35 / 2);
+    float xMinL = letterCenter.x - (WIDTH_LETTER / 2);
+    float xMaxL = letterCenter.x + (WIDTH_LETTER / 2);
+    float yMinL = letterCenter.y - (WIDTH_LETTER / 2);
+    float yMaxL = letterCenter.y + (WIDTH_LETTER / 2);
     
     float otherButtonArea = 0;
     float width = 0;
@@ -225,10 +231,10 @@
     float currentButtonArea = 0;
     if (leftButtonCenter.x != 0 && leftButtonCenter.y != 0)
     {
-        float xMinO = leftButtonCenter.x - (37 / 2);
-        float xMaxO = leftButtonCenter.x + (37 / 2);
-        float yMinO = leftButtonCenter.y - (37 / 2);
-        float yMaxO = leftButtonCenter.y + (37 / 2);
+        float xMinO = leftButtonCenter.x - (WIDTH_BUTTON / 2);
+        float xMaxO = leftButtonCenter.x + (WIDTH_BUTTON / 2);
+        float yMinO = leftButtonCenter.y - (WIDTH_BUTTON / 2);
+        float yMaxO = leftButtonCenter.y + (WIDTH_BUTTON / 2);
         if ((xMaxO > xMinL && xMinO < xMinL) && (yMaxO > yMaxL && yMinO < yMaxL))
         {
             width = xMaxO - xMinL;
@@ -278,7 +284,7 @@
 
 -(UIButton *)getTargetedButton:(CGPoint)center
 {
-    if (center.y < 210)
+    if (center.y < TOP_LINE_TWO)
     {
         CGPoint leftButtonCenter = button5.center;
         if (![button6 isHidden])
@@ -318,7 +324,7 @@
                 return button1;
         }
     }
-    else if (center.y < 256 && partTwoEnable == YES)
+    else if (center.y < TOP_LINE_THREE && partTwoEnable == YES)
     {
         CGPoint leftButtonCenter = button15.center;
         if (![button16 isHidden])
