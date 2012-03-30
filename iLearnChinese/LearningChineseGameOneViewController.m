@@ -51,7 +51,7 @@
 {
     // Reset value for a new game
     actualScore = 0;
-    time = 6;
+    time = 60;
     nbQuestions = 0;
     goodAnswer = 0;
     nbQuestion.text = [[NSString alloc] initWithFormat:@"Question %i :", nbQuestions];

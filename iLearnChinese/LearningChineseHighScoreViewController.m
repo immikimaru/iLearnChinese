@@ -68,8 +68,16 @@
     }
     // Configure the cell...
     Score *score = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    NSString *scoreLabel = [NSString stringWithFormat:@"%@\t%@%% %@ %@", [score.score stringValue], [score.accuracy stringValue], [score.game stringValue], score.user];
+    //NSString *scoreLabel = [NSString stringWithFormat:@"%@\t%@%% %@ %@", [score.score stringValue], [score.accuracy stringValue], [score.game stringValue], score.user];
+    
+    
+    NSDateFormatter *df = [[NSDateFormatter alloc] init];
+    [df setDateFormat:@"dd/MMM/YY"];
+    NSString *scoreDate = [NSString stringWithFormat:@"%@",[df stringFromDate:score.date]];
+    
+    NSString *scoreLabel = [NSString stringWithFormat:@"%@ Game %i : %@ - %@/%@ (%@%%)", scoreDate, [score.game intValue], score.score, score.answeredQuestion, score.askedQuestion,score.accuracy];
     cell.textLabel.text = scoreLabel;
+    cell.textLabel.font = [UIFont systemFontOfSize:14];
     return cell;
 }
 
