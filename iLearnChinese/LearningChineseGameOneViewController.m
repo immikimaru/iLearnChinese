@@ -187,7 +187,7 @@
 
 - (void)checkAnswer:(NSInteger)answer
 {
-    
+    question.text = [[NSString alloc] initWithFormat:@"%@\n(%@)", [[myDB objectAtIndex:right] valueForKey:@"chinese"], [[myDB objectAtIndex:right] valueForKey:@"pinyin"]];
     if (rightAnswer == [[myDB objectAtIndex:answer] valueForKey:@"english"])
     {
         purpose.text = @"很好！You scored.";
