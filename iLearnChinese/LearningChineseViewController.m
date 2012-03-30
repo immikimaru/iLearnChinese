@@ -48,7 +48,7 @@
     // Lesson 2
     [self addWordToDBWithEnglish:@"I" chinese:@"我" pinyin:@"qǐng"];
     [self addWordToDBWithEnglish:@"Come" chinese:@"来" pinyin:@"chūshì"];
-    [self addWordToDBWithEnglish:@"China" chinese:@"中国" pinyin:@"rùjìngkǎ"];
+    [self addWordToDBWithEnglish:@"China" chinese:@"中国" pinyin:@"zhōngguó"];
     [self addWordToDBWithEnglish:@"Travel" chinese:@"旅游" pinyin:@"lǚyóu"];
     [self addWordToDBWithEnglish:@"Purpose" chinese:@"目的" pinyin:@"mùdì"];
     [self addWordToDBWithEnglish:@"Be" chinese:@"是" pinyin:@"shì"];
