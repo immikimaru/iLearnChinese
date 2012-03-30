@@ -18,6 +18,7 @@
 @end
 
 @implementation LearningChineseViewController
+@synthesize dico = _dico;
 @synthesize managedObjectContext = _managedObjectContext;
 
 
@@ -144,6 +145,7 @@
 
 - (void)viewDidUnload
 {
+    [self setDico:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }

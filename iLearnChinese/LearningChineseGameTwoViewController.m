@@ -37,6 +37,7 @@
 {
     [super viewDidLoad];
     // Load virtual DB
+    [[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"draw.png"]]];
     [self loadDB];
     // Launch a game
     [self resetGame];

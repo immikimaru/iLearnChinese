@@ -10,7 +10,7 @@
 #import <CoreData/CoreData.h>
 
 @interface LearningChineseViewController : UIViewController
-
+@property (weak, nonatomic) IBOutlet UITabBarItem *dico;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 - (IBAction)game2Button:(id)sender;
 

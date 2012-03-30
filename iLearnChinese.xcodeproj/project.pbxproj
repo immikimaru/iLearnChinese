@@ -50,6 +50,8 @@
 		9D13EAA81524681800B4BB5B /* ilearnChinese_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D13EAA71524681800B4BB5B /* ilearnChinese_icon.png */; };
 		9DAE99931525A77B00F9DA98 /* Background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DAE99921525A77B00F9DA98 /* Background@2x.png */; };
 		9DAE999A1525A95000F9DA98 /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DAE99991525A95000F9DA98 /* Background.png */; };
+		9DF934D915262D1D00F2FEC7 /* meaning.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DF934D815262D1D00F2FEC7 /* meaning.png */; };
+		9DF934E115263F5900F2FEC7 /* draw.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DF934E015263F5900F2FEC7 /* draw.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,6 +117,8 @@
 		9D13EAA71524681800B4BB5B /* ilearnChinese_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ilearnChinese_icon.png; path = ../ilearnChinese_icon.png; sourceTree = "<group>"; };
 		9DAE99921525A77B00F9DA98 /* Background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Background@2x.png"; sourceTree = "<group>"; };
 		9DAE99991525A95000F9DA98 /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
+		9DF934D815262D1D00F2FEC7 /* meaning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meaning.png; sourceTree = "<group>"; };
+		9DF934E015263F5900F2FEC7 /* draw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = draw.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +176,8 @@
 				9DAE99991525A95000F9DA98 /* Background.png */,
 				9DAE99921525A77B00F9DA98 /* Background@2x.png */,
 				6FAFADCF1525EE7B00EA78F4 /* gameThreeDrag.png */,
+				9DF934D815262D1D00F2FEC7 /* meaning.png */,
+				9DF934E015263F5900F2FEC7 /* draw.png */,
 				6FAFADC51525E8F100EA78F4 /* GameTwowrite.png */,
 				6FAFADCD1525EC5800EA78F4 /* gameOneReco.png */,
 				6FAFADC31525AF5500EA78F4 /* chineseBook.png */,
@@ -385,6 +391,8 @@
 				6FD35B0315260066001BA536 /* imageB.png in Resources */,
 				6FD35B0515260070001BA536 /* topAndBottomRowSelected.png in Resources */,
 				6FD35B071526007F001BA536 /* indicator.png in Resources */,
+				9DF934D915262D1D00F2FEC7 /* meaning.png in Resources */,
+				9DF934E115263F5900F2FEC7 /* draw.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
