@@ -23,11 +23,10 @@
 {
     Word *word = [NSEntityDescription insertNewObjectForEntityForName:@"Word"
                                                inManagedObjectContext:self.managedObjectContext];
-    NSNumber *no = 0;
     [word setEnglish:english];
     [word setPinyin:pinyin];
     [word setChinese:chinese];
-    [word setAddByUser:no];
+    [word setAddByUser:[NSNumber numberWithBool:NO]];
     [self.managedObjectContext save:nil];
 }
 

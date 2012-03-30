@@ -129,8 +129,6 @@
 
 - (void) loadDB
 {
-    
-    NSLog(@"[JL DEBUG %s] LOAD DB : %@", __func__, self.managedObjectContext);
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Word" inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];

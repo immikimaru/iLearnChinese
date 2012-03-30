@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1171" systemVersion="11D50b" minimumToolsVersion="Xcode 4.1" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Score" syncable="YES">
+    <entity name="Score" representedClassName="Score" syncable="YES">
+        <attribute name="accuracy" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="answeredQuestion" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="askedQuestion" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="game" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="score" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="user" optional="YES" attributeType="String" syncable="YES"/>
@@ -13,6 +16,6 @@
     </entity>
     <elements>
         <element name="Word" positionX="160" positionY="192" width="128" height="105"/>
-        <element name="Score" positionX="160" positionY="192" width="128" height="90"/>
+        <element name="Score" positionX="160" positionY="192" width="128" height="135"/>
     </elements>
 </model>

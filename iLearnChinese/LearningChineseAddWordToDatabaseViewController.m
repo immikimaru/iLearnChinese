@@ -41,7 +41,7 @@
     [word setEnglish:_englishTextField.text];
     [word setPinyin:_pinyinTextField.text];
     [word setChinese:_chineseTextField.text];
-    [word setAddByUser:0];
+    [word setAddByUser:[NSNumber numberWithBool:YES]];
     
     [self.managedObjectContext save:nil];  // write to database
     [self.delegate saveButtonWasTapped:self];

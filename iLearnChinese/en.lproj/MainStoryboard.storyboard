@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2177" systemVersion="11D50d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="8sV-sY-5OU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="8sV-sY-5OU">
     <dependencies>
-        <deployment defaultVersion="1280" identifier="iOS"/>
+        <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -150,7 +150,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="722" y="-516"/>
+            <point key="canvasLocation" x="782" y="-426"/>
         </scene>
         <!--Learning Chinese Game Three View Controller-->
         <scene sceneID="HHm-V4-QXN">
@@ -1205,7 +1205,7 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="251" y="-587"/>
+            <point key="canvasLocation" x="782" y="-1000"/>
         </scene>
         <!--Learning Chinese View Controller - iLearnChinese-->
         <scene sceneID="V28-9U-8D6">
@@ -1364,7 +1364,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="722" y="78"/>
+            <point key="canvasLocation" x="782" y="164"/>
         </scene>
         <!--Learning Chinese Database View Controller - Words-->
         <scene sceneID="NGT-XG-h6o">
@@ -1403,7 +1403,7 @@
                     </navigationItem>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="722" y="717"/>
+            <point key="canvasLocation" x="782" y="883"/>
         </scene>
         <!--Learning Chinese Add Word To Database View Controller - Add Word-->
         <scene sceneID="QCq-nl-XPa">
@@ -1490,7 +1490,7 @@
                     </connections>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="1087" y="717"/>
+            <point key="canvasLocation" x="1241" y="699"/>
         </scene>
         <!--Learning Chinese Word Detail View Controller - Edit Word-->
         <scene sceneID="OtX-Zo-mWc">
@@ -1574,10 +1574,11 @@
                         <outlet property="chineseTextField" destination="kd1-zB-EWG" id="K9T-1m-tIE"/>
                         <outlet property="englishTextField" destination="tLK-Ez-zrM" id="rj5-ns-Txn"/>
                         <outlet property="pinyinTextField" destination="LNw-O1-9Wy" id="9DY-zn-Ewc"/>
+                        <outlet property="saveButton" destination="XJ7-xk-PAB" id="ugi-dN-ble"/>
                     </connections>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="1087" y="1320"/>
+            <point key="canvasLocation" x="1241" y="1254"/>
         </scene>
     </scenes>
     <classes>
