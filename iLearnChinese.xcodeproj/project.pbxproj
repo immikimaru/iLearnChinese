@@ -31,6 +31,7 @@
 		9D13EAA5152465C000B4BB5B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D13EAA4152465C000B4BB5B /* Default@2x.png */; };
 		9D13EAA81524681800B4BB5B /* ilearnChinese_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D13EAA71524681800B4BB5B /* ilearnChinese_icon.png */; };
 		9DAE99931525A77B00F9DA98 /* Background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DAE99921525A77B00F9DA98 /* Background@2x.png */; };
+		9DAE999A1525A95000F9DA98 /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DAE99991525A95000F9DA98 /* Background.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +76,7 @@
 		9D13EAA4152465C000B4BB5B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
 		9D13EAA71524681800B4BB5B /* ilearnChinese_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ilearnChinese_icon.png; path = ../ilearnChinese_icon.png; sourceTree = "<group>"; };
 		9DAE99921525A77B00F9DA98 /* Background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Background@2x.png"; sourceTree = "<group>"; };
+		9DAE99991525A95000F9DA98 /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +225,7 @@
 				9D13EAA4152465C000B4BB5B /* Default@2x.png */,
 				6FFB47C91524C78000798148 /* WordManager.sqlite */,
 				9DAE99921525A77B00F9DA98 /* Background@2x.png */,
+				9DAE99991525A95000F9DA98 /* Background.png */,
 			);
 			name = Ressources;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				9D13EAA5152465C000B4BB5B /* Default@2x.png in Resources */,
 				9D13EAA81524681800B4BB5B /* ilearnChinese_icon.png in Resources */,
 				9DAE99931525A77B00F9DA98 /* Background@2x.png in Resources */,
+				9DAE999A1525A95000F9DA98 /* Background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
