@@ -138,26 +138,7 @@
     }
     NSString *storePath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, 
                                                             NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"WordManager.sqlite"];
-    
     NSURL *storeUrl = [NSURL fileURLWithPath:storePath];
-    /*
-    // Put down default db if it doesn't already exist
-     NSFileManager *fileManager = [NSFileManager defaultManager];
-     if (![fileManager fileExistsAtPath:storePath])
-     {
-         NSLog(@"LOADING DEFAULT DATABASE");
-         //[fileManager copyItemAtPath:defaultStorePath toPath:storePath error:NULL];
-         Word *word = [NSEntityDescription insertNewObjectForEntityForName:@"Word"
-                                                    inManagedObjectContext:self.managedObjectContext];
-         [self addWordToDBWithWord:word English:@"test" chinese:@"test" pinyin:@"test"];
-         [self addWordToDBWithWord:word English:@"test1" chinese:@"test1" pinyin:@"test1"];
-         [self addWordToDBWithWord:word English:@"test2" chinese:@"test2" pinyin:@"test2"];
-     }
-     else
-     {
-         NSLog(@"The database already exist");
-     }
-     */
     NSError *error = nil;
     __persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
     if (![__persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeUrl options:nil error:&error])

@@ -108,11 +108,11 @@
         wordDetail.delegate = self;
         wordDetail.managedObjectContext = self.managedObjectContext;
         
-        // Store selected Role in selectedRole property
+        // Store selected word
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         self.selectedWord = [self.fetchedResultsController objectAtIndexPath:indexPath];
         
-        NSLog(@"Passing selected role (%@) to RoleDetailTVC", self.selectedWord.english);
+        NSLog(@"Passing selected word (%@) to RoleDetailTVC", self.selectedWord.addByUser);
         wordDetail.word = self.selectedWord;
     }
     else

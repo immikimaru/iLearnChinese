@@ -21,6 +21,7 @@
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, weak) id <wordDetailDelegate>delegate;
 - (IBAction)save:(id)sender;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
 
 @property (strong, nonatomic)Word *word;
 @property (weak, nonatomic) IBOutlet UITextField *englishTextField;
