@@ -25,10 +25,26 @@
                                                inManagedObjectContext:self.managedObjectContext];
     NSNumber *no = 0;
     [word setEnglish:english];
-    [word setPinyin:chinese];
-    [word setChinese:pinyin];
+    [word setPinyin:pinyin];
+    [word setChinese:chinese];
     [word setAddByUser:no];
     [self.managedObjectContext save:nil];
+}
+
+-(void)loadDefaultDatabase
+{
+    //Lesson 1
+    [self addWordToDBWithEnglish:@"Please" chinese:@"请" pinyin:@"qǐng"];
+    [self addWordToDBWithEnglish:@"Show" chinese:@"出示" pinyin:@"chūshì"];
+    [self addWordToDBWithEnglish:@"Entry Card" chinese:@"入境卡" pinyin:@"rùjìngkǎ"];
+    [self addWordToDBWithEnglish:@"Plane Ticket" chinese:@"机票" pinyin:@"jīpiào"];
+    [self addWordToDBWithEnglish:@"Boarding Pass" chinese:@"登记卡" pinyin:@"dēngjīkǎ"];
+    [self addWordToDBWithEnglish:@"Your" chinese:@"您的" pinyin:@"nínde"];
+    
+    //Lesson 2
+    
+    //[self addWordToDBWithEnglish:@"Entry Card" chinese:@"test2" pinyin:@"test2"];
+    //[self addWordToDBWithEnglish:@"Entry Card" chinese:@"test2" pinyin:@"test2"];
 }
 
 - (void)checkDatabase
@@ -43,14 +59,11 @@
     {
         NSLog(@"LOADING DEFAULT DATABASE");
         //[fileManager copyItemAtPath:defaultStorePath toPath:storePath error:NULL];
-        
-        [self addWordToDBWithEnglish:@"test" chinese:@"test" pinyin:@"test"];
-        [self addWordToDBWithEnglish:@"test1" chinese:@"test1" pinyin:@"test1"];
-        [self addWordToDBWithEnglish:@"test2" chinese:@"test2" pinyin:@"test2"];
+        [self loadDefaultDatabase];
     }
     else
     {
-        NSLog(@"The database already exist");
+        NSLog(@"The database is not empty.");
     }
 }
 
@@ -76,8 +89,6 @@
 {
     [[NSUserDefaults standardUserDefaults] synchronize];
     NSDictionary* defaults = [[NSUserDefaults standardUserDefaults] dictionaryRepresentation];
-    // NSLog(@"Value : %@", [defaults objectForKey:@"AppleKeyboards"]);
-    // NSLog(@"Subvalue : %@", [[defaults objectForKey:@"AppleKeyboards"] objectAtIndex:0]);
     NSString *chineseKeyboard = [[NSString alloc] initWithString:@"zh_Hans-HWR@sw=HWR"];
     id appleKeyboards = [defaults objectForKey:@"AppleKeyboards"];
     for (int i = 0; i < [appleKeyboards count]; i++)
