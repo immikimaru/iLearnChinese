@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
-#import "LearningChineseDatabaseViewController.h"
-#import "LearningChineseGameOneViewController.h"
 
 @interface LearningChineseViewController : UIViewController
 

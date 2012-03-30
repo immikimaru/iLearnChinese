@@ -27,28 +27,6 @@
     
     LearningChineseViewController *mainViewController = (LearningChineseViewController *)[[navigationController viewControllers] objectAtIndex:0];
     mainViewController.managedObjectContext = self.managedObjectContext;
-    // Setting up the databse
-    /*
-    NSString *storePath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, 
-                                                                NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"WordManager.sqlite"];
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    if (![fileManager fileExistsAtPath:storePath])
-    {
-        NSLog(@"LOADING DEFAULT DATABASE");
-        //[fileManager copyItemAtPath:defaultStorePath toPath:storePath error:NULL];
-        Word *word = [NSEntityDescription insertNewObjectForEntityForName:@"Word"
-                                                   inManagedObjectContext:self.managedObjectContext];
-        [self addWordToDBWithWord:word English:@"test" chinese:@"test" pinyin:@"test"];
-        [self addWordToDBWithWord:word English:@"test1" chinese:@"test1" pinyin:@"test1"];
-        [self addWordToDBWithWord:word English:@"test2" chinese:@"test2" pinyin:@"test2"];
-    }
-    else
-    {
-        NSLog(@"The database already exist");
-    }
-    */
-    
-    
     // Override point for customization after application launch.
     // Setup the background
     UIImageView *background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background1.png"]];

@@ -8,6 +8,7 @@
 
 #import "LearningChineseGameOneViewController.h"
 #import <CoreData/CoreData.h>
+#import "Score.h"
 
 @interface LearningChineseGameOneViewController ()
 
@@ -135,6 +136,13 @@
     NSError *error;
     myDB = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
     countDB = myDB.count;
+
+    // this is how you save the scores:
+    Score *score = [NSEntityDescription insertNewObjectForEntityForName:@"Score"
+                                               inManagedObjectContext:self.managedObjectContext];
+    [score setScore:[NSNumber numberWithInt:999]];
+    [self.managedObjectContext save:nil];
+     
 }
 
 - (void)countDown

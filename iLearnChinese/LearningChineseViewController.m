@@ -7,6 +7,9 @@
 //
 
 #import "LearningChineseViewController.h"
+#import "LearningChineseDatabaseViewController.h"
+#import "LearningChineseHighScoreViewController.h"
+#import "LearningChineseGameOneViewController.h"
 #import "LearningChineseGameTwoViewController.h"
 
 @interface LearningChineseViewController ()
@@ -98,7 +101,6 @@
     if (![myDB count])
     {
         NSLog(@"LOADING DEFAULT DATABASE");
-        //[fileManager copyItemAtPath:defaultStorePath toPath:storePath error:NULL];
         [self loadDefaultDatabase];
     }
     else
@@ -155,6 +157,11 @@
     {
         LearningChineseDatabaseViewController *words = segue.destinationViewController;
         words.managedObjectContext = self.managedObjectContext;
+    }
+    else if ([segue.identifier isEqualToString:@"PushHighscore"])
+    {
+        LearningChineseHighScoreViewController *scores = segue.destinationViewController;
+        scores.managedObjectContext = self.managedObjectContext;        
     }
     else if ([segue.identifier isEqualToString:@"PushGameOne"])
     {
