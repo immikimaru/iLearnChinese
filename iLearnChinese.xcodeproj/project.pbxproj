@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24B05AEB152590D70085F649 /* LearningChineseLetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B05AE8152590D70085F649 /* LearningChineseLetter.m */; };
+		24B05AEC152590D70085F649 /* LearningChineseLettersList.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B05AEA152590D70085F649 /* LearningChineseLettersList.m */; };
 		6F9E408D15237F4200DACAD3 /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9E408715237BEF00DACAD3 /* CoreDataTableViewController.m */; };
 		6FAFADAB1525992400EA78F4 /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAFADAA1525992400EA78F4 /* Score.m */; };
 		6FDFAC661522E2800065E70F /* LearningChineseDatabaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FDFAC651522E2800065E70F /* LearningChineseDatabaseViewController.m */; };
@@ -33,6 +35,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		24B05AE7152590D70085F649 /* LearningChineseLetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearningChineseLetter.h; sourceTree = "<group>"; };
+		24B05AE8152590D70085F649 /* LearningChineseLetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearningChineseLetter.m; sourceTree = "<group>"; };
+		24B05AE9152590D70085F649 /* LearningChineseLettersList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearningChineseLettersList.h; sourceTree = "<group>"; };
+		24B05AEA152590D70085F649 /* LearningChineseLettersList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearningChineseLettersList.m; sourceTree = "<group>"; };
 		6F9E408615237BEF00DACAD3 /* CoreDataTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataTableViewController.h; sourceTree = "<group>"; };
 		6F9E408715237BEF00DACAD3 /* CoreDataTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataTableViewController.m; sourceTree = "<group>"; };
 		6FAFADA91525992400EA78F4 /* Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Score.h; sourceTree = "<group>"; };
@@ -88,9 +94,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24B05ADF15258FBF0085F649 /* GameThreeList */ = {
+			isa = PBXGroup;
+			children = (
+				24B05AE7152590D70085F649 /* LearningChineseLetter.h */,
+				24B05AE8152590D70085F649 /* LearningChineseLetter.m */,
+				24B05AE9152590D70085F649 /* LearningChineseLettersList.h */,
+				24B05AEA152590D70085F649 /* LearningChineseLettersList.m */,
+			);
+			name = GameThreeList;
+			sourceTree = "<group>";
+		};
 		6F169C5415245A860059002A /* Games */ = {
 			isa = PBXGroup;
 			children = (
+				24B05ADF15258FBF0085F649 /* GameThreeList */,
 				6FF88EB4151C551800834B91 /* LearningChineseGameOneViewController.h */,
 				6FF88EB5151C551800834B91 /* LearningChineseGameOneViewController.m */,
 				6FF88EB7151C552700834B91 /* LearningChineseGameTwoViewController.h */,
