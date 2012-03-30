@@ -16,10 +16,61 @@
 @implementation LearningChineseViewController
 @synthesize managedObjectContext = _managedObjectContext;
 
+
+- (void)addWordToDBWithEnglish:(NSString *)english 
+                    chinese:(NSString *)chinese 
+                     pinyin:(NSString *)pinyin
+{
+    Word *word = [NSEntityDescription insertNewObjectForEntityForName:@"Word"
+                                               inManagedObjectContext:self.managedObjectContext];
+    NSNumber *no = 0;
+    [word setEnglish:english];
+    [word setPinyin:pinyin];
+    [word setChinese:chinese];
+    [word setAddByUser:no];
+    [self.managedObjectContext save:nil];
+}
+
+-(void)loadDefaultDatabase
+{
+    //Lesson 1
+    [self addWordToDBWithEnglish:@"Please" chinese:@"请" pinyin:@"qǐng"];
+    [self addWordToDBWithEnglish:@"Show" chinese:@"出示" pinyin:@"chūshì"];
+    [self addWordToDBWithEnglish:@"Entry Card" chinese:@"入境卡" pinyin:@"rùjìngkǎ"];
+    [self addWordToDBWithEnglish:@"Plane Ticket" chinese:@"机票" pinyin:@"jīpiào"];
+    [self addWordToDBWithEnglish:@"Boarding Pass" chinese:@"登记卡" pinyin:@"dēngjīkǎ"];
+    [self addWordToDBWithEnglish:@"Your" chinese:@"您的" pinyin:@"nínde"];
+    
+    //Lesson 2
+    
+    //[self addWordToDBWithEnglish:@"Entry Card" chinese:@"test2" pinyin:@"test2"];
+    //[self addWordToDBWithEnglish:@"Entry Card" chinese:@"test2" pinyin:@"test2"];
+}
+
+- (void)checkDatabase
+{
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Word" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    NSError *error;
+    NSArray *myDB = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    
+    if (![myDB count])
+    {
+        NSLog(@"LOADING DEFAULT DATABASE");
+        //[fileManager copyItemAtPath:defaultStorePath toPath:storePath error:NULL];
+        [self loadDefaultDatabase];
+    }
+    else
+    {
+        NSLog(@"The database is not empty.");
+    }
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Setting up the databse
+    [self checkDatabase];
 }
 
 - (void)viewDidUnload
@@ -38,8 +89,6 @@
 {
     [[NSUserDefaults standardUserDefaults] synchronize];
     NSDictionary* defaults = [[NSUserDefaults standardUserDefaults] dictionaryRepresentation];
-    // NSLog(@"Value : %@", [defaults objectForKey:@"AppleKeyboards"]);
-    // NSLog(@"Subvalue : %@", [[defaults objectForKey:@"AppleKeyboards"] objectAtIndex:0]);
     NSString *chineseKeyboard = [[NSString alloc] initWithString:@"zh_Hans-HWR@sw=HWR"];
     id appleKeyboards = [defaults objectForKey:@"AppleKeyboards"];
     for (int i = 0; i < [appleKeyboards count]; i++)

@@ -72,8 +72,8 @@
 		6FFF873015240CD70039B1BB /* LearningChineseWordDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearningChineseWordDetailViewController.h; sourceTree = "<group>"; };
 		6FFF873115240CD70039B1BB /* LearningChineseWordDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearningChineseWordDetailViewController.m; sourceTree = "<group>"; };
 		9D0A246E151C6A0300AC7811 /* background1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background1.png; sourceTree = "<group>"; };
-		9D13EAA4152465C000B4BB5B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		9D13EAA71524681800B4BB5B /* ilearnChinese_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ilearnChinese_icon.png; sourceTree = "<group>"; };
+		9D13EAA4152465C000B4BB5B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
+		9D13EAA71524681800B4BB5B /* ilearnChinese_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ilearnChinese_icon.png; path = ../ilearnChinese_icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,8 +152,6 @@
 		6FF88E88151C547200834B91 = {
 			isa = PBXGroup;
 			children = (
-				9D13EAA71524681800B4BB5B /* ilearnChinese_icon.png */,
-				9D13EAA4152465C000B4BB5B /* Default@2x.png */,
 				6FF88E9D151C547300834B91 /* iLearnChinese */,
 				6FF88E96151C547300834B91 /* Frameworks */,
 				6FF88E94151C547300834B91 /* Products */,
@@ -218,6 +216,8 @@
 		6FF88EBB151C567500834B91 /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
+				9D13EAA71524681800B4BB5B /* ilearnChinese_icon.png */,
+				9D13EAA4152465C000B4BB5B /* Default@2x.png */,
 				6FFB47C91524C78000798148 /* WordManager.sqlite */,
 				6FF88EBC151C578400834B91 /* background.png */,
 				9D0A246E151C6A0300AC7811 /* background1.png */,

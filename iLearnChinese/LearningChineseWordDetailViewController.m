@@ -19,7 +19,6 @@
 
 - (void)viewDidLoad 
 {
-    NSLog(@"Setting the value of fields in this static table to that of the passed Word");
     self.englishTextField.text = self.word.english;
     self.pinyinTextField.text = self.word.pinyin;
     self.chineseTextField.text = self.word.chinese;
@@ -36,7 +35,6 @@
 
 - (IBAction)save:(id)sender
 {
-    NSLog(@"Telling the AddRoleTVC Delegate that Save was tapped on the AddRoleTVC");
     [self.word setEnglish:self.englishTextField.text];
     [self.word setPinyin:self.pinyinTextField.text];
     [self.word setChinese:self.chineseTextField.text];
