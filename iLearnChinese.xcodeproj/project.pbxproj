@@ -11,6 +11,9 @@
 		24B05AEC152590D70085F649 /* LearningChineseLettersList.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B05AEA152590D70085F649 /* LearningChineseLettersList.m */; };
 		6F9E408D15237F4200DACAD3 /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9E408715237BEF00DACAD3 /* CoreDataTableViewController.m */; };
 		6FAFADB71525A95800EA78F4 /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAFADB61525A95800EA78F4 /* Score.m */; };
+		6FAFADC01525AE1500EA78F4 /* LearningChineseHighScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAFADBF1525AE1500EA78F4 /* LearningChineseHighScoreViewController.m */; };
+		6FAFADC21525AED900EA78F4 /* trophy.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FAFADC11525AED900EA78F4 /* trophy.png */; };
+		6FAFADC41525AF5500EA78F4 /* chineseBook.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FAFADC31525AF5500EA78F4 /* chineseBook.png */; };
 		6FDFAC661522E2800065E70F /* LearningChineseDatabaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FDFAC651522E2800065E70F /* LearningChineseDatabaseViewController.m */; };
 		6FDFAC6D1522EA770065E70F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FDFAC6C1522EA770065E70F /* CoreData.framework */; };
 		6FDFAC701522EFCA0065E70F /* LearningChineseAddWordToDatabaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FDFAC6F1522EFCA0065E70F /* LearningChineseAddWordToDatabaseViewController.m */; };
@@ -43,6 +46,10 @@
 		6F9E408715237BEF00DACAD3 /* CoreDataTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataTableViewController.m; sourceTree = "<group>"; };
 		6FAFADB51525A95800EA78F4 /* Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Score.h; sourceTree = "<group>"; };
 		6FAFADB61525A95800EA78F4 /* Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Score.m; sourceTree = "<group>"; };
+		6FAFADBE1525AE1500EA78F4 /* LearningChineseHighScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearningChineseHighScoreViewController.h; sourceTree = "<group>"; };
+		6FAFADBF1525AE1500EA78F4 /* LearningChineseHighScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearningChineseHighScoreViewController.m; sourceTree = "<group>"; };
+		6FAFADC11525AED900EA78F4 /* trophy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trophy.png; sourceTree = "<group>"; };
+		6FAFADC31525AF5500EA78F4 /* chineseBook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chineseBook.png; sourceTree = "<group>"; };
 		6FDFAC641522E2800065E70F /* LearningChineseDatabaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearningChineseDatabaseViewController.h; sourceTree = "<group>"; };
 		6FDFAC651522E2800065E70F /* LearningChineseDatabaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearningChineseDatabaseViewController.m; sourceTree = "<group>"; };
 		6FDFAC6C1522EA770065E70F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -117,6 +124,15 @@
 				6FFB47C71524AFEE00798148 /* LearningChineseGameThreeViewController.m */,
 			);
 			name = Games;
+			sourceTree = "<group>";
+		};
+		6FAFADBC1525ADF800EA78F4 /* HighScore */ = {
+			isa = PBXGroup;
+			children = (
+				6FAFADBE1525AE1500EA78F4 /* LearningChineseHighScoreViewController.h */,
+				6FAFADBF1525AE1500EA78F4 /* LearningChineseHighScoreViewController.m */,
+			);
+			name = HighScore;
 			sourceTree = "<group>";
 		};
 		6FDFAC711522EFD30065E70F /* DB */ = {
@@ -212,6 +228,7 @@
 		6FF88EBA151C565800834B91 /* GUI */ = {
 			isa = PBXGroup;
 			children = (
+				6FAFADBC1525ADF800EA78F4 /* HighScore */,
 				6F169C5415245A860059002A /* Games */,
 				6FDFAC711522EFD30065E70F /* DB */,
 			);
@@ -221,6 +238,8 @@
 		6FF88EBB151C567500834B91 /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
+				6FAFADC31525AF5500EA78F4 /* chineseBook.png */,
+				6FAFADC11525AED900EA78F4 /* trophy.png */,
 				9D13EAA71524681800B4BB5B /* ilearnChinese_icon.png */,
 				9D13EAA4152465C000B4BB5B /* Default@2x.png */,
 				6FFB47C91524C78000798148 /* WordManager.sqlite */,
@@ -287,6 +306,8 @@
 				9D13EAA81524681800B4BB5B /* ilearnChinese_icon.png in Resources */,
 				9DAE99931525A77B00F9DA98 /* Background@2x.png in Resources */,
 				9DAE999A1525A95000F9DA98 /* Background.png in Resources */,
+				6FAFADC21525AED900EA78F4 /* trophy.png in Resources */,
+				6FAFADC41525AF5500EA78F4 /* chineseBook.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +333,7 @@
 				24B05AEB152590D70085F649 /* LearningChineseLetter.m in Sources */,
 				24B05AEC152590D70085F649 /* LearningChineseLettersList.m in Sources */,
 				6FAFADB71525A95800EA78F4 /* Score.m in Sources */,
+				6FAFADC01525AE1500EA78F4 /* LearningChineseHighScoreViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -3,7 +3,7 @@
     <dependencies>
         <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1179"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -20,55 +20,6 @@
                 </navigationController>
             </objects>
             <point key="canvasLocation" x="-97" y="64"/>
-        </scene>
-        <!--View Controller - Item 2-->
-        <scene sceneID="jvj-Vc-on0">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sOW-Fh-bUL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="mT2-DV-IOE" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="baw-yd-wfL">
-                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="V7F-SC-ZDt"/>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="292" y="1213"/>
-        </scene>
-        <!--View Controller - Item 1-->
-        <scene sceneID="6j5-R5-ZJk">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="snk-Jn-0V5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="ReZ-jm-0hd" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="v1V-BQ-1pp">
-                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="ROP-E9-UF2"/>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="292" y="649"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="1Mq-eN-6tB">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="O50-r1-kHd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tabBarController definesPresentationContext="YES" id="kV9-Fv-DXf" sceneMemberID="viewController">
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="pZr-d1-8SK">
-                        <rect key="frame" x="129" y="330" width="163" height="49"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="ReZ-jm-0hd" kind="relationship" relationship="viewControllers" id="OZh-Xz-LDM"/>
-                        <segue destination="mT2-DV-IOE" kind="relationship" relationship="viewControllers" id="Emt-i5-sQU"/>
-                    </connections>
-                </tabBarController>
-            </objects>
-            <point key="canvasLocation" x="-242" y="931"/>
         </scene>
         <!--Learning Chinese Game One View Controller-->
         <scene sceneID="Wz7-sy-9db">
@@ -1295,11 +1246,11 @@
                                     <action selector="game2Button:" destination="fFH-B4-Nz9" eventType="touchUpInside" id="V5f-ao-KDU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="f5D-4E-nvS">
-                                <rect key="frame" x="40" y="313" width="94" height="37"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="f5D-4E-nvS">
+                                <rect key="frame" x="20" y="338" width="104" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="DataBase">
+                                <state key="normal" title="DataBase" image="chineseBook.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1325,6 +1276,21 @@
                                     <segue destination="mqr-45-h8c" kind="push" id="YL1-i8-2qV"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xal-Q6-9WL">
+                                <rect key="frame" x="213" y="338" width="87" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="High Score" image="trophy.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="c1x-5z-53J" kind="push" id="OTA-np-cf3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <rect key="contentStretch" x="0.39999999999999997" y="0.0" width="0.59999999999999964" height="1"/>
@@ -1337,6 +1303,36 @@
                 </viewController>
             </objects>
             <point key="canvasLocation" x="292" y="64"/>
+        </scene>
+        <!--Table View Controller - High Score-->
+        <scene sceneID="yrv-5A-ob5">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sr8-Z4-QrG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="c1x-5z-53J" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Evz-tE-MhI">
+                        <rect key="frame" x="0.0" y="44" width="320" height="436"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HighScoreCell" id="LSb-9t-mBY">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="c1x-5z-53J" id="vdC-3k-sPy"/>
+                            <outlet property="delegate" destination="c1x-5z-53J" id="VcA-0n-4il"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="High Score" id="tLb-aX-zr1"/>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="292" y="883"/>
         </scene>
         <!--Learning Chinese Game Two View Controller-->
         <scene sceneID="YZt-Uj-ohx">
@@ -1630,6 +1626,10 @@
             <point key="canvasLocation" x="1241" y="1254"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="chineseBook.png" width="128" height="128"/>
+        <image name="trophy.png" width="128" height="128"/>
+    </resources>
     <classes>
         <class className="CoreDataTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CoreDataTableViewController.h"/>
