@@ -95,7 +95,7 @@ NSUInteger const TOP_LINE_THREE = 238;
 - (void)viewDidLoad
 {
     self.dataController = [[LearningChineseLettersList alloc] init]; 
-    
+     [[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background_game3.png"]]];
     // Initialization buttonMovableTable
     [self.dataController addLetterWithName:buttonA.titleLabel.text center:buttonA.center];
     [self.dataController addLetterWithName:buttonE.titleLabel.text center:buttonE.center];
@@ -550,13 +550,6 @@ NSUInteger const TOP_LINE_THREE = 238;
         
         // COME BACK TO BEGININ POSITION
         [UIView animateWithDuration:slideFactor*2 delay:0.5 options:UIViewAnimationOptionCurveEaseOut animations:^{recognizer.view.center = oldCenter;} completion:nil];
-        //        NSLog(@"LETTER : %f - %f", oldCenter.x, oldCenter.y);
-        //        NSLog(@"BUTTON1 : %f - %f", button1.center.x, button1.center.y);
-        //        NSLog(@"BUTTON2 : %f - %f", button2.center.x, button2.center.y);
-        //        NSLog(@"BUTTON3 : %f - %f", button3.center.x, button3.center.y);
-        //        NSLog(@"BUTTON4 : %f - %f", button4.center.x, button4.center.y);
-        //        NSLog(@"BUTTON5 : %f - %f", button5.center.x, button5.center.y);
-        //        NSLog(@"BUTTON6 : %f - %f", button6.center.x, button6.center.y);
     }
 }
 
