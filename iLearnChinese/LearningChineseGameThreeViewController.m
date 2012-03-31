@@ -678,6 +678,7 @@ NSUInteger const TOP_LINE_THREE = 238;
         }
     }
     
+    [self cleanForResult];
     restTime = 3;
     isResting = YES;
     
@@ -712,7 +713,6 @@ NSUInteger const TOP_LINE_THREE = 238;
             self.score -= 3;
     }
     gamePoints.text = [NSString stringWithFormat:@"%d", score];
-    [self cleanForResult];
 }
 
 -(void)skipCorrection
@@ -747,11 +747,11 @@ NSUInteger const TOP_LINE_THREE = 238;
     }
     self.score -= 5;
     restTime = 5;
+    [self cleanForResult];
     isResting = YES;
     NSString *correctAnswer = [[NSString alloc] initWithFormat:[[myDB objectAtIndex:indexQuestion] valueForKey:@"pinyin"]];
     displayZone.text = [[NSString alloc] initWithFormat:@"You should try!! :(\n\n%@\n%@", chineseCharacter.text, correctAnswer];
     gamePoints.text = [NSString stringWithFormat:@"%d", score];
-    [self cleanForResult];
 }
 
 -(void)prepareForNextQuestion:(NSUInteger)partsNumber
@@ -820,7 +820,6 @@ NSUInteger const TOP_LINE_THREE = 238;
     }
     else 
     {
-        [self cleanForResult];
         if (restTime > 0)
         {
             restTime--;
