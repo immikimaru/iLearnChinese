@@ -14,6 +14,11 @@
 
 @interface LearningChineseDatabaseViewController : CoreDataTableViewController 
 <learningWordToDatabaseDelegate, wordDetailDelegate>
+
+
+@property (weak, nonatomic) IBOutlet UILabel *chineseLabel;
+
+
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) Word *selectedWord;

@@ -37,7 +37,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *answerField;
 
 - (IBAction)valideAnswer:(id)sender;
-
+- (void) saveScore;
 - (void) loadDB;
 - (void) loadQuestion;
 - (void) updateScore;

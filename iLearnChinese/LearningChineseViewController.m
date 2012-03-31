@@ -11,12 +11,14 @@
 #import "LearningChineseHighScoreViewController.h"
 #import "LearningChineseGameOneViewController.h"
 #import "LearningChineseGameTwoViewController.h"
+#import "User.h"
 
 @interface LearningChineseViewController ()
 
 @end
 
 @implementation LearningChineseViewController
+@synthesize dico = _dico;
 @synthesize managedObjectContext = _managedObjectContext;
 
 
@@ -109,15 +111,41 @@
     }
 }
 
+- (void)checkUser
+{
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"User" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    NSError *error;
+    NSArray *myDB = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    
+    if (![myDB count])
+    {
+        NSLog(@"LOADING DEFAULT USER");
+        
+        User *user = [NSEntityDescription insertNewObjectForEntityForName:@"User"
+                                                   inManagedObjectContext:self.managedObjectContext];
+        
+        [user setName:@"Default"];
+        [self.managedObjectContext save:nil];
+    }
+    else
+    {
+        NSLog(@"USER EXIST.");
+    }
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Background.png"]]];
     [self checkDatabase];
+    [self checkUser];
 }
 
 - (void)viewDidUnload
 {
+    [self setDico:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -147,7 +175,7 @@
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
     if (buttonIndex == 1) {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=//Settings/Keyboard/Keyboards"]];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=//General/Keyboard/Keyboards"]];
     }
 }
 
@@ -184,8 +212,16 @@
     bool isLaunchable = [self isChineseKeyboardActivated];
     if (!isLaunchable)
     {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Chinese keyboard not activated" message:@"You need to activate the 'Chinese-Simplified (Handwriting)' keyboard to play this game. Would you like to activate this keyboard ?" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes",nil];
-        [alert show];
+        NSComparisonResult order = [[UIDevice currentDevice].systemVersion compare: @"5.1" options: NSNumericSearch];
+        if (order == NSOrderedSame || order == NSOrderedDescending) {
+            // OS version >= 5.1
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Chinese keyboard not activated" message:@"You need to activate the 'Chinese-Simplified (Handwriting)' keyboard to Go to General > Settings > Keyboard > International Keyboards." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+            [alert show];
+        } else {
+            // OS version < 5.1
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Chinese keyboard not activated" message:@"You need to activate the 'Chinese-Simplified (Handwriting)' keyboard to play this game. Would you like to activate this keyboard ?" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes",nil];
+            [alert show];
+        }
     }
     else
     {
