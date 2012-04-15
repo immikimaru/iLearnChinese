@@ -78,22 +78,22 @@
         four = (arc4random() % countDB);
     
     // Reset the button to initial state
-    [answerOne setTitle:[[myDB objectAtIndex:one] valueForKey:@"english"] forState:UIControlStateNormal];
+    [answerOne setTitle:[[myDB objectAtIndex:one] valueForKey:@"pinyin"] forState:UIControlStateNormal];
     answerOne.titleLabel.textColor = black;
     [answerOne setHidden:NO];
     [answerOne setEnabled:YES];
     
-	[answerTwo setTitle:[[myDB objectAtIndex:two] valueForKey:@"english"]  forState:UIControlStateNormal];
+	[answerTwo setTitle:[[myDB objectAtIndex:two] valueForKey:@"pinyin"]  forState:UIControlStateNormal];
     answerTwo.titleLabel.textColor = black;
     [answerTwo setHidden:NO];
     [answerTwo setEnabled:YES];
     
-	[answerThree setTitle:[[myDB objectAtIndex:three] valueForKey:@"english"]forState:UIControlStateNormal];
+	[answerThree setTitle:[[myDB objectAtIndex:three] valueForKey:@"pinyin"]forState:UIControlStateNormal];
     answerThree.titleLabel.textColor = black;
     [answerThree setHidden:NO];
     [answerThree setEnabled:YES];
     
-	[answerFour setTitle:[[myDB objectAtIndex:four] valueForKey:@"english"]forState:UIControlStateNormal];
+	[answerFour setTitle:[[myDB objectAtIndex:four] valueForKey:@"pinyin"]forState:UIControlStateNormal];
     answerFour.titleLabel.textColor = black;
 	[answerFour setHidden:NO];
     [answerFour setEnabled:YES];
@@ -117,7 +117,7 @@
     }
     
     // Save the right answer & ask the question
-    rightAnswer = [[myDB objectAtIndex:right] valueForKey:@"english"];
+    rightAnswer = [[myDB objectAtIndex:right] valueForKey:@"pinyin"];
     nbQuestions++;
     nbQuestion.text = [[NSString alloc] initWithFormat:@"Question %i :", nbQuestions];
     question.text = [[NSString alloc] initWithFormat:@"%@", [[myDB objectAtIndex:right] valueForKey:@"chinese"]];
@@ -208,8 +208,8 @@
 
 - (void)checkAnswer:(NSInteger)answer
 {
-    question.text = [[NSString alloc] initWithFormat:@"%@\n(%@)", [[myDB objectAtIndex:right] valueForKey:@"chinese"], [[myDB objectAtIndex:right] valueForKey:@"pinyin"]];
-    if (rightAnswer == [[myDB objectAtIndex:answer] valueForKey:@"english"])
+    question.text = [[NSString alloc] initWithFormat:@"%@\n(%@)", [[myDB objectAtIndex:right] valueForKey:@"chinese"], [[myDB objectAtIndex:right] valueForKey:@"english"]];
+    if (rightAnswer == [[myDB objectAtIndex:answer] valueForKey:@"pinyin"])
     {
         purpose.text = @"很好！You scored.";
         goodAnswer++;
