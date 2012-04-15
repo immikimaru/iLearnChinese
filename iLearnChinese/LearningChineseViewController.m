@@ -90,6 +90,60 @@
     [self addWordToDBWithEnglish:@"Fruits" chinese:@"水果" pinyin:@"shuǐguǒ"];
     [self addWordToDBWithEnglish:@"Meat products" chinese:@"肉制品" pinyin:@"ròuzhìpǐn"];
     [self addWordToDBWithEnglish:@"Plants" chinese:@"植物" pinyin:@"zhíwù"];
+    
+    // Lesson 6
+    [self addWordToDBWithEnglish:@"Excuse me" chinese:@"请问" pinyin:@"qǐngwèn"];
+    [self addWordToDBWithEnglish:@"Where" chinese:@"在哪儿" pinyin:@"zài nǎ'er"];
+    [self addWordToDBWithEnglish:@"Get" chinese:@"取" pinyin:@"qǔ"];
+    [self addWordToDBWithEnglish:@"Baggage" chinese:@"行李" pinyin:@"xínglǐ"];
+    [self addWordToDBWithEnglish:@"Perform" chinese:@"办理" pinyin:@"bànlǐ"];
+    [self addWordToDBWithEnglish:@"Boarding" chinese:@"登机" pinyin:@"dēng jī"];
+    [self addWordToDBWithEnglish:@"Procedure" chinese:@"手续" pinyin:@"shǒuxù"];
+    [self addWordToDBWithEnglish:@"Customs" chinese:@"海关" pinyin:@"hǎiguān"];
+    [self addWordToDBWithEnglish:@"Check" chinese:@"托运" pinyin:@"tuōyùn"];
+    
+    // Lesson 7
+    [self addWordToDBWithEnglish:@"Look for" chinese:@"找" pinyin:@"zhǎo"];
+    [self addWordToDBWithEnglish:@"To" chinese:@"到了" pinyin:@"dàole"];
+    [self addWordToDBWithEnglish:@"Do not" chinese:@"别" pinyin:@"bié"];
+    [self addWordToDBWithEnglish:@"Anxious" chinese:@"着急" pinyin:@"zhāojí"];
+    [self addWordToDBWithEnglish:@"Again" chinese:@"再" pinyin:@"zài"];
+    [self addWordToDBWithEnglish:@"Looking" chinese:@"赵赵" pinyin:@"zhǎo zhao"];
+    [self addWordToDBWithEnglish:@"Passport" chinese:@"护照" pinyin:@"hùzhào"];
+    [self addWordToDBWithEnglish:@"Bag" chinese:@"包" pinyin:@"bāo"];
+    [self addWordToDBWithEnglish:@"Wallet" chinese:@"钱包" pinyin:@"qiánbāo"];
+    
+    // Lesson 8
+    [self addWordToDBWithEnglish:@"Thank you" chinese:@"谢谢" pinyin:@"xièxiè"];
+    [self addWordToDBWithEnglish:@"Help" chinese:@"帮助" pinyin:@"bāngzhù"];
+    [self addWordToDBWithEnglish:@"You're welcome" chinese:@"不客气" pinyin:@"bù kèqì"];
+    [self addWordToDBWithEnglish:@"Introduction" chinese:@"介绍" pinyin:@"jièshào"];
+    [self addWordToDBWithEnglish:@"Recommendation" chinese:@"推荐" pinyin:@"tuījiàn"];
+    [self addWordToDBWithEnglish:@"Concern" chinese:@"关心" pinyin:@"guānxīn"];
+    
+    // Lesson 9
+    [self addWordToDBWithEnglish:@"Join" chinese:@"接" pinyin:@"jiē"];
+    [self addWordToDBWithEnglish:@"You're welcome" chinese:@"不用谢" pinyin:@"bùyòng xiè"];
+    [self addWordToDBWithEnglish:@"See off" chinese:@"送" pinyin:@"sòng"];
+    [self addWordToDBWithEnglish:@"See" chinese:@"看" pinyin:@"kàn"];
+    [self addWordToDBWithEnglish:@"Accompany" chinese:@"陪" pinyin:@"péi"];
+    
+    // Lesson 10
+    [self addWordToDBWithEnglish:@"Airplane" chinese:@"飞机" pinyin:@"fēijī"];
+    [self addWordToDBWithEnglish:@"What" chinese:@"什么" pinyin:@"shénme"];
+    [self addWordToDBWithEnglish:@"Time" chinese:@"时候" pinyin:@"shíhou"];
+    [self addWordToDBWithEnglish:@"Take off" chinese:@"起飞" pinyin:@"qǐfēi"];
+    [self addWordToDBWithEnglish:@"Now" chinese:@"现在" pinyin:@"xiànzài"];
+    [self addWordToDBWithEnglish:@"Still" chinese:@"还" pinyin:@"hái"];
+    [self addWordToDBWithEnglish:@"Know" chinese:@"知道" pinyin:@"zhīdào"];
+    [self addWordToDBWithEnglish:@"Listen" chinese:@"听" pinyin:@"tīng"];
+    [self addWordToDBWithEnglish:@"Broadcast" chinese:@"广播" pinyin:@"guǎngbò"];
+    [self addWordToDBWithEnglish:@"Message" chinese:@"通知" pinyin:@"tōngzhī"];
+    [self addWordToDBWithEnglish:@"Arrive" chinese:@"到达" pinyin:@"dàodá"];
+    [self addWordToDBWithEnglish:@"Land" chinese:@"降落" pinyin:@"jiàngluò"];
+    [self addWordToDBWithEnglish:@"Land" chinese:@"着陆" pinyin:@"zhuólù"];
+    
+    //[self addWordToDBWithEnglish:@"" chinese:@"" pinyin:@""];
 }
 
 - (void)checkDatabase
