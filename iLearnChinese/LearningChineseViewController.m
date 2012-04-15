@@ -143,6 +143,76 @@
     [self addWordToDBWithEnglish:@"Land" chinese:@"降落" pinyin:@"jiàngluò"];
     [self addWordToDBWithEnglish:@"Land" chinese:@"着陆" pinyin:@"zhuólù"];
     
+    // Lesson 11
+    [self addWordToDBWithEnglish:@"Wish" chinese:@"祝" pinyin:@"zhù"];
+    [self addWordToDBWithEnglish:@"Pleasant" chinese:@"愉快" pinyin:@"yúkuài"];
+    [self addWordToDBWithEnglish:@"Trip" chinese:@"旅途" pinyin:@"lǚtú"];
+    [self addWordToDBWithEnglish:@"Good bye" chinese:@"再见" pinyin:@"zàijiàn"];
+    [self addWordToDBWithEnglish:@"Good journey" chinese:@"一路平安" pinyin:@"yīlùpíng'ān"];
+    [self addWordToDBWithEnglish:@"Good humor" chinese:@"心情愉快" pinyin:@"xīngqíngyúkuài"];
+    [self addWordToDBWithEnglish:@"Good luck" chinese:@"好运" pinyin:@"hǎoyùn"];
+    
+    // Lesson 12
+    [self addWordToDBWithEnglish:@"Airport bus station" chinese:@"机场大巴" pinyin:@"jīchǎngdàbā"];
+    [self addWordToDBWithEnglish:@"Go straight" chinese:@"往前走" pinyin:@"wǎngqiánzǒu"];
+    [self addWordToDBWithEnglish:@"Turn left" chinese:@"往左拐" pinyin:@"wǎngzuǒguǎi"];
+    [self addWordToDBWithEnglish:@"Parking Lot" chinese:@"停车场" pinyin:@"tíngchēchǎng"];
+    
+    // Lesson 13
+    [self addWordToDBWithEnglish:@"Go" chinese:@"去" pinyin:@"qù"];
+    [self addWordToDBWithEnglish:@"Peking" chinese:@"北京" pinyin:@"běijīng"];
+    [self addWordToDBWithEnglish:@"university" chinese:@"大学" pinyin:@"dàxué"];
+    [self addWordToDBWithEnglish:@"Get off" chinese:@"下车" pinyin:@"xiàchē"];
+    [self addWordToDBWithEnglish:@"Tsinghua" chinese:@"清华" pinyin:@"qīnghuá"];
+    [self addWordToDBWithEnglish:@"Fudan" chinese:@"复旦" pinyin:@"fùdàn"];
+    [self addWordToDBWithEnglish:@"Jinan" chinese:@"暨南" pinyin:@"jìnán"];
+    
+    // Lesson 14
+    [self addWordToDBWithEnglish:@"Which" chinese:@"几" pinyin:@"jǐ"];
+    [self addWordToDBWithEnglish:@"Bus" chinese:@"路" pinyin:@"lù"];
+    [self addWordToDBWithEnglish:@"And" chinese:@"和" pinyin:@"hé"];
+    [self addWordToDBWithEnglish:@"Both" chinese:@"都" pinyin:@"dōu"];
+    [self addWordToDBWithEnglish:@"One" chinese:@"一" pinyin:@"yī"];
+    [self addWordToDBWithEnglish:@"Two" chinese:@"二" pinyin:@"èr"];
+    [self addWordToDBWithEnglish:@"Four" chinese:@"四" pinyin:@"sì"];
+    [self addWordToDBWithEnglish:@"Ten" chinese:@"十" pinyin:@"shí"];
+    [self addWordToDBWithEnglish:@"Five" chinese:@"五" pinyin:@"wǔ"];
+    [self addWordToDBWithEnglish:@"Forbidden City" chinese:@"故宫" pinyin:@"gùgōng"];
+    [self addWordToDBWithEnglish:@"Temple of Heaven" chinese:@"天坛" pinyin:@"tiāntán"];
+    [self addWordToDBWithEnglish:@"Lama Temple" chinese:@"雍和宫" pinyin:@"yōnghégōng"];
+    
+    // Lesson 16
+    [self addWordToDBWithEnglish:@"Go straight" chinese:@"一直走" pinyin:@"yìzhízǒu"];
+    [self addWordToDBWithEnglish:@"Turn right" chinese:@"往右拐" pinyin:@"wǎngyòuguǎi"];
+    [self addWordToDBWithEnglish:@"How" chinese:@"怎么走" pinyin:@"zěnmezǒu"];
+    
+    // Lesson 17
+    [self addWordToDBWithEnglish:@"Nearby" chinese:@"附近" pinyin:@"fùjìn"];
+    [self addWordToDBWithEnglish:@"Toilet" chinese:@"卫生间" pinyin:@"weìshēngjiān"];
+    [self addWordToDBWithEnglish:@"Cybercafe" chinese:@"网吧" pinyin:@"wǎngbā"];
+    [self addWordToDBWithEnglish:@"ATM" chinese:@"自动取款机" pinyin:@"zìdòngqǔkuǎjī"];
+    [self addWordToDBWithEnglish:@"Petrol Station" chinese:@"加油站" pinyin:@"jiāyóuzhàn"];
+    
+    // Lesson 18
+    [self addWordToDBWithEnglish:@"Master" chinese:@"师傅" pinyin:@"shīfu"];
+    [self addWordToDBWithEnglish:@"How much" chinese:@"多少钱" pinyin:@"duōshaoqián"];
+    [self addWordToDBWithEnglish:@"Kuai" chinese:@"块" pinyin:@"kuài"];
+    [self addWordToDBWithEnglish:@"Train station" chinese:@"火车站" pinyin:@"huǒchēzhàn"];
+    
+    // Lesson 19
+    [self addWordToDBWithEnglish:@"Yuanmingyuan" chinese:@"圆明园" pinyin:@"yuánmíngyuán"];
+    [self addWordToDBWithEnglish:@"The nearest" chinese:@"最近" pinyin:@"zuìjìn"];
+    [self addWordToDBWithEnglish:@"Subway station" chinese:@"地铁站" pinyin:@"dìtiězhàn"];
+    [self addWordToDBWithEnglish:@"Cinema" chinese:@"电影院" pinyin:@"diànyǐngyuàn"];
+    
+    // Lesson 20
+    [self addWordToDBWithEnglish:@"Here" chinese:@"在这儿" pinyin:@"zàizhèr"];
+    [self addWordToDBWithEnglish:@"Stop for a while" chinese:@"听一下" pinyin:@"tíngyíxià"];
+    [self addWordToDBWithEnglish:@"Trunk" chinese:@"后备箱" pinyin:@"hòubèixiāng"];
+    [self addWordToDBWithEnglish:@"Wait for me for a while" chinese:@"等我一会儿" pinyin:@"děngwǒyíhuìr"];
+    [self addWordToDBWithEnglish:@"Give change" chinese:@"找零钱" pinyin:@"zhǎolíngqián"];
+    
+    
     //[self addWordToDBWithEnglish:@"" chinese:@"" pinyin:@""];
 }
 
