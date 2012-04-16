@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		24B05AEB152590D70085F649 /* LearningChineseLetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B05AE8152590D70085F649 /* LearningChineseLetter.m */; };
 		24B05AEC152590D70085F649 /* LearningChineseLettersList.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B05AEA152590D70085F649 /* LearningChineseLettersList.m */; };
+		6F3AABD115344D75005E83EC /* gameFourFlash.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F3AABD015344D75005E83EC /* gameFourFlash.png */; };
+		6F3AABD815344E2E005E83EC /* LearningChineseGameFourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3AABD715344E2E005E83EC /* LearningChineseGameFourViewController.m */; };
 		6F9E408D15237F4200DACAD3 /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9E408715237BEF00DACAD3 /* CoreDataTableViewController.m */; };
 		6FAFADB71525A95800EA78F4 /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAFADB61525A95800EA78F4 /* Score.m */; };
 		6FAFADC01525AE1500EA78F4 /* LearningChineseHighScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAFADBF1525AE1500EA78F4 /* LearningChineseHighScoreViewController.m */; };
@@ -60,6 +62,9 @@
 		24B05AE8152590D70085F649 /* LearningChineseLetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearningChineseLetter.m; sourceTree = "<group>"; };
 		24B05AE9152590D70085F649 /* LearningChineseLettersList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearningChineseLettersList.h; sourceTree = "<group>"; };
 		24B05AEA152590D70085F649 /* LearningChineseLettersList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearningChineseLettersList.m; sourceTree = "<group>"; };
+		6F3AABD015344D75005E83EC /* gameFourFlash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gameFourFlash.png; sourceTree = "<group>"; };
+		6F3AABD615344E2E005E83EC /* LearningChineseGameFourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearningChineseGameFourViewController.h; sourceTree = "<group>"; };
+		6F3AABD715344E2E005E83EC /* LearningChineseGameFourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearningChineseGameFourViewController.m; sourceTree = "<group>"; };
 		6F9E408615237BEF00DACAD3 /* CoreDataTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataTableViewController.h; sourceTree = "<group>"; };
 		6F9E408715237BEF00DACAD3 /* CoreDataTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataTableViewController.m; sourceTree = "<group>"; };
 		6FAFADB51525A95800EA78F4 /* Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Score.h; sourceTree = "<group>"; };
@@ -152,6 +157,8 @@
 		6F169C5415245A860059002A /* Games */ = {
 			isa = PBXGroup;
 			children = (
+				6F3AABD615344E2E005E83EC /* LearningChineseGameFourViewController.h */,
+				6F3AABD715344E2E005E83EC /* LearningChineseGameFourViewController.m */,
 				24B05ADF15258FBF0085F649 /* GameThreeList */,
 				6FF88EB4151C551800834B91 /* LearningChineseGameOneViewController.h */,
 				6FF88EB5151C551800834B91 /* LearningChineseGameOneViewController.m */,
@@ -179,6 +186,7 @@
 				9DAE99921525A77B00F9DA98 /* Background@2x.png */,
 				6FAFADCF1525EE7B00EA78F4 /* gameThreeDrag.png */,
 				9DF934D815262D1D00F2FEC7 /* meaning.png */,
+				6F3AABD015344D75005E83EC /* gameFourFlash.png */,
 				9D5765931526E51800B6360C /* background_game3.png */,
 				9DF934E015263F5900F2FEC7 /* draw.png */,
 				6FAFADC51525E8F100EA78F4 /* GameTwowrite.png */,
@@ -397,6 +405,7 @@
 				9DF934D915262D1D00F2FEC7 /* meaning.png in Resources */,
 				9DF934E115263F5900F2FEC7 /* draw.png in Resources */,
 				9D5765941526E51800B6360C /* background_game3.png in Resources */,
+				6F3AABD115344D75005E83EC /* gameFourFlash.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +433,7 @@
 				6FAFADB71525A95800EA78F4 /* Score.m in Sources */,
 				6FAFADC01525AE1500EA78F4 /* LearningChineseHighScoreViewController.m in Sources */,
 				6FD35B0E152608CD001BA536 /* User.m in Sources */,
+				6F3AABD815344E2E005E83EC /* LearningChineseGameFourViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

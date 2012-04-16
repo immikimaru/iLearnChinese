@@ -108,7 +108,7 @@
     [self addWordToDBWithEnglish:@"Do not" chinese:@"别" pinyin:@"bié"];
     [self addWordToDBWithEnglish:@"Anxious" chinese:@"着急" pinyin:@"zhāojí"];
     [self addWordToDBWithEnglish:@"Again" chinese:@"再" pinyin:@"zài"];
-    [self addWordToDBWithEnglish:@"Looking" chinese:@"赵赵" pinyin:@"zhǎo zhao"];
+    [self addWordToDBWithEnglish:@"Looking" chinese:@"找找" pinyin:@"zhǎo zhao"];
     [self addWordToDBWithEnglish:@"Passport" chinese:@"护照" pinyin:@"hùzhào"];
     [self addWordToDBWithEnglish:@"Bag" chinese:@"包" pinyin:@"bāo"];
     [self addWordToDBWithEnglish:@"Wallet" chinese:@"钱包" pinyin:@"qiánbāo"];
