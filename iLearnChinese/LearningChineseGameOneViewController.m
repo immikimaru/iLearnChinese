@@ -51,7 +51,7 @@
 {
     // Reset value for a new game
     actualScore = 0;
-    time = 60;
+    time = 600;
     nbQuestions = 0;
     goodAnswer = 0;
     nbQuestion.text = [[NSString alloc] initWithFormat:@"Question %i :", nbQuestions];
@@ -68,14 +68,14 @@
     
     one = (arc4random() % countDB);
     two = (arc4random() % countDB);
-    while (one == two)
-        two = (arc4random() % countDB);
+    while ([[[myDB objectAtIndex:two] valueForKey:@"chinese"] length] != [[[myDB objectAtIndex:one] valueForKey:@"chinese"] length] || one == two)
+            two = (arc4random() % countDB);
     three = (arc4random() % countDB);
-    while (one == three || two == three)
-        three = (arc4random() % countDB);
+    while ([[[myDB objectAtIndex:two] valueForKey:@"chinese"] length] != [[[myDB objectAtIndex:three] valueForKey:@"chinese"] length] || one == three || two == three)
+            three = (arc4random() % countDB);
     four = (arc4random() % countDB);
-    while (one == four || two == four || three == four)
-        four = (arc4random() % countDB);
+    while ([[[myDB objectAtIndex:four] valueForKey:@"chinese"] length] != [[[myDB objectAtIndex:three] valueForKey:@"chinese"] length] || one == four || two == four || three == four)
+            four = (arc4random() % countDB);
     
     // Reset the button to initial state
     [answerOne setTitle:[[myDB objectAtIndex:one] valueForKey:@"pinyin"] forState:UIControlStateNormal];
