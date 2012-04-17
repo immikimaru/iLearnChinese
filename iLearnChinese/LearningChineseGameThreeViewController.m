@@ -860,11 +860,11 @@ NSUInteger const TOP_LINE_THREE = 238;
     indexQuestion = arc4random() % countDB;
     int lenght = 0;
     NSString *word = nil;
-    while (lenght > 3 || lenght < 1)
-    {
-        word = [[NSString alloc] initWithFormat:[[myDB objectAtIndex:indexQuestion] valueForKey:@"chinese"]];
-        lenght = word.length;
-    }
+    // Check if the size of the word is not superior to 3
+    while ([[[NSString alloc] initWithFormat:[[myDB objectAtIndex:indexQuestion] valueForKey:@"chinese"]] length] > 3)
+        indexQuestion = arc4random() % countDB;
+    word = [[NSString alloc] initWithFormat:[[myDB objectAtIndex:indexQuestion] valueForKey:@"chinese"]];
+    lenght = word.length;
     nbQuestions++;
     chineseCharacter.text = word;
     
