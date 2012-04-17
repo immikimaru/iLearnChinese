@@ -161,7 +161,7 @@
     // Lesson 13
     [self addWordToDBWithEnglish:@"Go" chinese:@"去" pinyin:@"qù"];
     [self addWordToDBWithEnglish:@"Peking" chinese:@"北京" pinyin:@"běijīng"];
-    [self addWordToDBWithEnglish:@"university" chinese:@"大学" pinyin:@"dàxué"];
+    [self addWordToDBWithEnglish:@"University" chinese:@"大学" pinyin:@"dàxué"];
     [self addWordToDBWithEnglish:@"Get off" chinese:@"下车" pinyin:@"xiàchē"];
     [self addWordToDBWithEnglish:@"Tsinghua" chinese:@"清华" pinyin:@"qīnghuá"];
     [self addWordToDBWithEnglish:@"Fudan" chinese:@"复旦" pinyin:@"fùdàn"];
@@ -282,7 +282,7 @@
     //
     [self addWordToDBWithEnglish:@"Gate" chinese:@"门口" pinyin:@"Ménkǒu"];
 
-//    [self addWordToDBWithEnglish:@"" chinese:@"" pinyin:@""];
+    //[self addWordToDBWithEnglish:@"" chinese:@"" pinyin:@""];
 }
 
 - (void)checkDatabase

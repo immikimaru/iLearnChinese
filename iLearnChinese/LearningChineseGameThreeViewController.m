@@ -685,7 +685,7 @@ NSUInteger const TOP_LINE_THREE = 238;
             self.score += 10;
         else
             self.score += 5;
-        displayZone.text = [[NSString alloc] initWithFormat:@"很好！You scored.\n\n%@\n%@", chineseCharacter.text, correctAnswer];
+        displayZone.text = [[NSString alloc] initWithFormat:@"很好！You scored.\n\n%@\n%@", correctAnswer, [[NSString alloc] initWithFormat:[[myDB objectAtIndex:indexQuestion] valueForKey:@"english"]]];
     }
     else
     {
@@ -696,7 +696,7 @@ NSUInteger const TOP_LINE_THREE = 238;
         }
         else
         {
-            displayZone.text = [[NSString alloc] initWithFormat:@"You should try!! :(\n\n%@\n%@", chineseCharacter.text, correctAnswer];
+            displayZone.text = [[NSString alloc] initWithFormat:@"You should try!! :(\n\n%@\n%@", correctAnswer,[[NSString alloc] initWithFormat:[[myDB objectAtIndex:indexQuestion] valueForKey:@"english"]]];
         }
         if (partThreeEnable)
             self.score -= 1;
