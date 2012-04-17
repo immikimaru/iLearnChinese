@@ -212,52 +212,72 @@
     [self addWordToDBWithEnglish:@"Wait for me for a while" chinese:@"等我一会儿" pinyin:@"děngwǒyíhuìr"];
     [self addWordToDBWithEnglish:@"Give change" chinese:@"找零钱" pinyin:@"zhǎolíngqián"];
     
-    // Lesson 21 FROM LESSON 21 ONLY THE WORDS OF THE RIGHT PAGE ARE IN THE DB
-    [self addWordToDBWithEnglish:@"Single room" chinese:@"单人间" pinyin:@"dān rénjiān"];
-    [self addWordToDBWithEnglish:@"Standard room" chinese:@"标准间" pinyin:@"biāozhǔn jiān"];
+    // Lesson 21
+    [self addWordToDBWithEnglish:@"Single room" chinese:@"单人间" pinyin:@"dānrénjiān"];
+    [self addWordToDBWithEnglish:@"Standard room" chinese:@"标准间" pinyin:@"biāozhǔnjiān"];
     [self addWordToDBWithEnglish:@"Suite" chinese:@"套房" pinyin:@"tàofáng"];
+    [self addWordToDBWithEnglish:@"Empty" chinese:@"空" pinyin:@"kōng"];
     
     // Lesson 22
-    [self addWordToDBWithEnglish:@"Common Room" chinese:@"普通间" pinyin:@"pǔtōng jiān"];
+    [self addWordToDBWithEnglish:@"Common Room" chinese:@"普通间" pinyin:@"pǔtōngjiān"];
     [self addWordToDBWithEnglish:@"Bed" chinese:@"床位" pinyin:@"chuángwèi"];
+    [self addWordToDBWithEnglish:@"Six" chinese:@"六" pinyin:@"liù"];
+    [self addWordToDBWithEnglish:@"Three" chinese:@"三" pinyin:@"sān"];
+    [self addWordToDBWithEnglish:@"Hundred" chinese:@"百" pinyin:@"bǎi"];
     
     // Lesson 23
-    [self addWordToDBWithEnglish:@"Two days" chinese:@"两天" pinyin:@"liǎng tiān"];
-    [self addWordToDBWithEnglish:@"A week" chinese:@"一个 星期" pinyin:@"yīgè xīngqí"];
+    [self addWordToDBWithEnglish:@"Night" chinese:@"晚上" pinyin:@"wǎnshang"];
+    [self addWordToDBWithEnglish:@"Two days" chinese:@"两天" pinyin:@"liǎngtiān"];
+    [self addWordToDBWithEnglish:@"Week" chinese:@"一个 星期" pinyin:@"xīngqí"];
     [self addWordToDBWithEnglish:@"Half a year" chinese:@"半年" pinyin:@"bànnián"];
     
     
     // Lesson 24
     [self addWordToDBWithEnglish:@"Tickets" chinese:@"门票" pinyin:@"ménpiào"];
     [self addWordToDBWithEnglish:@"Clothes" chinese:@"衣服" pinyin:@"yīfú"];
+    [self addWordToDBWithEnglish:@"Discount" chinese:@"打折" pinyin:@"dǎzhé"];
+    [self addWordToDBWithEnglish:@"20%% off" chinese:@"打八折" pinyin:@"dǎbāzhé"];
+    [self addWordToDBWithEnglish:@"How much is the discount ?" chinese:@"打几折" pinyin:@"dǎjǐzhé"];
     
     // Lesson 25
     [self addWordToDBWithEnglish:@"Try" chinese:@"试" pinyin:@"shì"];
-    [self addWordToDBWithEnglish:@"Hot water" chinese:@"热水" pinyin:@"rè shuǐ"];
+    [self addWordToDBWithEnglish:@"Hot water" chinese:@"热水" pinyin:@"rèshuǐ"];
     [self addWordToDBWithEnglish:@"Music" chinese:@"音乐" pinyin:@"yīnyuè"];
     [self addWordToDBWithEnglish:@"Rest" chinese:@"休息" pinyin:@"xiūxí"];
+    [self addWordToDBWithEnglish:@"Now" chinese:@"先" pinyin:@"xiān"];
+    [self addWordToDBWithEnglish:@"Have a look" chinese:@"看看" pinyin:@"kànkan"];
     
     // Lesson 26
-    [self addWordToDBWithEnglish:@"Ticket" chinese:@"车票" pinyin:@"chē piào"];
+    [self addWordToDBWithEnglish:@"Ticket" chinese:@"车票" pinyin:@"chēpiào"];
     [self addWordToDBWithEnglish:@"Seat" chinese:@"座位" pinyin:@"zuòwèi"];
     [self addWordToDBWithEnglish:@"Feast" chinese:@"酒席" pinyin:@"jiǔxí"];
+    [self addWordToDBWithEnglish:@"Reserve" chinese:@"预订" pinyin:@"yùdìng"];
+    [self addWordToDBWithEnglish:@"Room" chinese:@"房间" pinyin:@"fángjiān"];
+    [self addWordToDBWithEnglish:@"Just a minute" chinese:@"稍等" pinyin:@"shāoděng"];
+    [self addWordToDBWithEnglish:@"Three days ago" chinese:@"三天前" pinyin:@"sāntiānqián"];
     
     // Lesson 27
     [self addWordToDBWithEnglish:@"Fill in a form" chinese:@"填表" pinyin:@"tián biǎo"];
     [self addWordToDBWithEnglish:@"Signature" chinese:@"签字" pinyin:@"qiānzì"];
-    [self addWordToDBWithEnglish:@"Invoicing" chinese:@"开发票" pinyin:@"kāi fāpiào"];
+    [self addWordToDBWithEnglish:@"Invoicing" chinese:@"开发票" pinyin:@"kāifāpiào"];
+    [self addWordToDBWithEnglish:@"Place a deposit" chinese:@"交押金" pinyin:@"jiāoyājīn"];
     
-    // Lesson 28 NONE HIHI
+    // Lesson 28
+    [self addWordToDBWithEnglish:@"Hold on to" chinese:@"収￼好" pinyin:@"shōuhǎo"];
+    [self addWordToDBWithEnglish:@"Deposit" chinese:@"押金" pinyin:@"yājīn"];
+    [self addWordToDBWithEnglish:@"Receipt" chinese:@"收据" pinyin:@"shōujū"];
     
     // Lesson 29
-    [self addWordToDBWithEnglish:@"Make a phone call" chinese:@"打电话" pinyin:@"dǎ diànhuà"];
+    [self addWordToDBWithEnglish:@"Make a phone call" chinese:@"打电话" pinyin:@"dǎdiànhuà"];
     [self addWordToDBWithEnglish:@"Internet" chinese:@"上网" pinyin:@"shàngwǎng"];
     [self addWordToDBWithEnglish:@"Wash" chinese:@"洗" pinyin:@"xǐ"];
+    [self addWordToDBWithEnglish:@"Check out" chinese:@"退房" pinyin:@"tuìfáng"];
+    [self addWordToDBWithEnglish:@"Check" chinese:@"查房" pinyin:@"cháfáng"];
     
     // Lesson 30 
     [self addWordToDBWithEnglish:@"International" chinese:@"国际" pinyin:@"guójì"];
-    [self addWordToDBWithEnglish:@"Play" chinese:@"能打" pinyin:@"néng dǎ"];
-    [self addWordToDBWithEnglish:@"Smoking" chinese:@"抽烟" pinyin:@"chōu yān"];
+    [self addWordToDBWithEnglish:@"Play" chinese:@"能打" pinyin:@"néngdǎ"];
+    [self addWordToDBWithEnglish:@"Smoking" chinese:@"抽烟" pinyin:@"chōuyān"];
     
     //
     [self addWordToDBWithEnglish:@"Gate" chinese:@"门口" pinyin:@"Ménkǒu"];
