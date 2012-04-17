@@ -65,8 +65,9 @@
 {
     // Random a question
     UIColor *black = [UIColor blackColor];
-    
     one = (arc4random() % countDB);
+    while ([[[myDB objectAtIndex:one] valueForKey:@"chinese"] length] > 3)
+        one = (arc4random() % countDB);
     two = (arc4random() % countDB);
     while ([[[myDB objectAtIndex:two] valueForKey:@"chinese"] length] != [[[myDB objectAtIndex:one] valueForKey:@"chinese"] length] || one == two)
             two = (arc4random() % countDB);
