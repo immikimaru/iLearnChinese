@@ -242,7 +242,7 @@
     [self addWordToDBWithEnglish:@"How much is the discount ?" chinese:@"打几折" pinyin:@"dǎjǐzhé"];
     
     // Lesson 25
-    [self addWordToDBWithEnglish:@"Try" chinese:@"试" pinyin:@"shì"];
+    [self addWordToDBWithEnglish:@"Try" chinese:@"试试" pinyin:@"shìshi"];
     [self addWordToDBWithEnglish:@"Hot water" chinese:@"热水" pinyin:@"rèshuǐ"];
     [self addWordToDBWithEnglish:@"Music" chinese:@"音乐" pinyin:@"yīnyuè"];
     [self addWordToDBWithEnglish:@"Rest" chinese:@"休息" pinyin:@"xiūxí"];
@@ -259,7 +259,7 @@
     [self addWordToDBWithEnglish:@"Three days ago" chinese:@"三天前" pinyin:@"sāntiānqián"];
     
     // Lesson 27
-    [self addWordToDBWithEnglish:@"Fill in a form" chinese:@"填表" pinyin:@"tián biǎo"];
+    [self addWordToDBWithEnglish:@"Fill in a form" chinese:@"填表" pinyin:@"tiánbiǎo"];
     [self addWordToDBWithEnglish:@"Signature" chinese:@"签字" pinyin:@"qiānzì"];
     [self addWordToDBWithEnglish:@"Invoicing" chinese:@"开发票" pinyin:@"kāifāpiào"];
     [self addWordToDBWithEnglish:@"Place a deposit" chinese:@"交押金" pinyin:@"jiāoyājīn"];
